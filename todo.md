@@ -127,3 +127,7 @@
 - [x] SEO対応：/aboutを専用title・description・canonical・OGP付きでprerender対象へ追加する。
 - [x] SEO検証：canonical、JSON-LD、h1、/about、sitemap、静的ビルドを自動テストで確認する。
 - [x] SEO運用案内：Cloudflareのpages.devから独自ドメインへの301設定とSearch Console登録手順を文書化する。
+
+- [x] GitHubバックアップ方式変更：ZIPではなく、node_modules・dist・.manus・ログを除外した展開済みソースツリーを初回コミットする。
+- [x] GitHubバックアップ：現行ソースをhatsukoilaboratory/hatsukoi-labのmainへ初回pushする。
+- [x] GitHubバックアップ検証：バックアップ後のリポジトリ内容を確認し、Cloudflare PagesのDirect Upload設定・独自ドメイン・公開サイトに変更がないことを確認する。
