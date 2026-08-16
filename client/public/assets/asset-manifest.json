@@ -1,0 +1,630 @@
+{
+  "generatedAt": "2026-08-16T13:50:10.314Z",
+  "assets": [
+    {
+      "fileName": "01_underwear_0206020e.webp",
+      "output": "/assets/01_underwear_0206020e.webp",
+      "bytes": 120090
+    },
+    {
+      "fileName": "01_underwear_0dd3a683.webp",
+      "output": "/assets/01_underwear_0dd3a683.webp",
+      "bytes": 96508
+    },
+    {
+      "fileName": "01_underwear_458d0d30.webp",
+      "output": "/assets/01_underwear_458d0d30.webp",
+      "bytes": 122388
+    },
+    {
+      "fileName": "01_underwear_77baa732.webp",
+      "output": "/assets/01_underwear_77baa732.webp",
+      "bytes": 111080
+    },
+    {
+      "fileName": "01_underwear_8306abce.webp",
+      "output": "/assets/01_underwear_8306abce.webp",
+      "bytes": 110760
+    },
+    {
+      "fileName": "01_underwear_9e9d2730.webp",
+      "output": "/assets/01_underwear_9e9d2730.webp",
+      "bytes": 93624
+    },
+    {
+      "fileName": "01_underwear_d36bd8f8.webp",
+      "output": "/assets/01_underwear_d36bd8f8.webp",
+      "bytes": 64860
+    },
+    {
+      "fileName": "01_underwear_d664f7d2.webp",
+      "output": "/assets/01_underwear_d664f7d2.webp",
+      "bytes": 123876
+    },
+    {
+      "fileName": "01_underwear_ff282060.webp",
+      "output": "/assets/01_underwear_ff282060.webp",
+      "bytes": 109016
+    },
+    {
+      "fileName": "02_story_p001_65822bab.webp",
+      "output": "/assets/02_story_p001_65822bab.webp",
+      "bytes": 173396
+    },
+    {
+      "fileName": "02_story_p003_4f233fee.webp",
+      "output": "/assets/02_story_p003_4f233fee.webp",
+      "bytes": 242876
+    },
+    {
+      "fileName": "02_story_p003_54329847.webp",
+      "output": "/assets/02_story_p003_54329847.webp",
+      "bytes": 155196
+    },
+    {
+      "fileName": "02_story_p003_a246ca44.webp",
+      "output": "/assets/02_story_p003_a246ca44.webp",
+      "bytes": 124478
+    },
+    {
+      "fileName": "02_story_p003_bb5489a5.webp",
+      "output": "/assets/02_story_p003_bb5489a5.webp",
+      "bytes": 166364
+    },
+    {
+      "fileName": "02_story_p003_f2e9d1e6.webp",
+      "output": "/assets/02_story_p003_f2e9d1e6.webp",
+      "bytes": 253042
+    },
+    {
+      "fileName": "02_story_p004_32cd64b9.webp",
+      "output": "/assets/02_story_p004_32cd64b9.webp",
+      "bytes": 76078
+    },
+    {
+      "fileName": "02_story_p005_25aa3399.webp",
+      "output": "/assets/02_story_p005_25aa3399.webp",
+      "bytes": 192696
+    },
+    {
+      "fileName": "03_story_p002_b9a3db8f.webp",
+      "output": "/assets/03_story_p002_b9a3db8f.webp",
+      "bytes": 191176
+    },
+    {
+      "fileName": "03_story_p004_21724b6c.webp",
+      "output": "/assets/03_story_p004_21724b6c.webp",
+      "bytes": 176634
+    },
+    {
+      "fileName": "03_story_p004_524f2e1e.webp",
+      "output": "/assets/03_story_p004_524f2e1e.webp",
+      "bytes": 236920
+    },
+    {
+      "fileName": "03_story_p005_dc8fb805.webp",
+      "output": "/assets/03_story_p005_dc8fb805.webp",
+      "bytes": 199808
+    },
+    {
+      "fileName": "03_story_p005_febd9b0a.webp",
+      "output": "/assets/03_story_p005_febd9b0a.webp",
+      "bytes": 217026
+    },
+    {
+      "fileName": "03_story_p006_6c837d67.webp",
+      "output": "/assets/03_story_p006_6c837d67.webp",
+      "bytes": 185734
+    },
+    {
+      "fileName": "03_story_p006_98b250cc.webp",
+      "output": "/assets/03_story_p006_98b250cc.webp",
+      "bytes": 229410
+    },
+    {
+      "fileName": "03_story_p007_d696cfcf.webp",
+      "output": "/assets/03_story_p007_d696cfcf.webp",
+      "bytes": 233726
+    },
+    {
+      "fileName": "04_story_p003_eb9b5694.webp",
+      "output": "/assets/04_story_p003_eb9b5694.webp",
+      "bytes": 156768
+    },
+    {
+      "fileName": "04_story_p005_578a8bc3.webp",
+      "output": "/assets/04_story_p005_578a8bc3.webp",
+      "bytes": 255144
+    },
+    {
+      "fileName": "04_story_p006_81d2c940.webp",
+      "output": "/assets/04_story_p006_81d2c940.webp",
+      "bytes": 187118
+    },
+    {
+      "fileName": "04_story_p007_38e1e996.webp",
+      "output": "/assets/04_story_p007_38e1e996.webp",
+      "bytes": 316932
+    },
+    {
+      "fileName": "04_story_p007_7d639cc1.webp",
+      "output": "/assets/04_story_p007_7d639cc1.webp",
+      "bytes": 227066
+    },
+    {
+      "fileName": "04_story_p007_c0c15ee1.webp",
+      "output": "/assets/04_story_p007_c0c15ee1.webp",
+      "bytes": 165692
+    },
+    {
+      "fileName": "04_story_p008_aa8826ef.webp",
+      "output": "/assets/04_story_p008_aa8826ef.webp",
+      "bytes": 144306
+    },
+    {
+      "fileName": "04_story_p009_e61b5706.webp",
+      "output": "/assets/04_story_p009_e61b5706.webp",
+      "bytes": 167526
+    },
+    {
+      "fileName": "05_story_p007_3b380d01.webp",
+      "output": "/assets/05_story_p007_3b380d01.webp",
+      "bytes": 215444
+    },
+    {
+      "fileName": "05_story_p007_84148c9c.webp",
+      "output": "/assets/05_story_p007_84148c9c.webp",
+      "bytes": 288172
+    },
+    {
+      "fileName": "05_story_p008_3aa6368a.webp",
+      "output": "/assets/05_story_p008_3aa6368a.webp",
+      "bytes": 248396
+    },
+    {
+      "fileName": "05_story_p008_5f6abae3.webp",
+      "output": "/assets/05_story_p008_5f6abae3.webp",
+      "bytes": 242008
+    },
+    {
+      "fileName": "05_story_p008_c0ae24a7.webp",
+      "output": "/assets/05_story_p008_c0ae24a7.webp",
+      "bytes": 305082
+    },
+    {
+      "fileName": "05_story_p008_f5aabd94.webp",
+      "output": "/assets/05_story_p008_f5aabd94.webp",
+      "bytes": 170586
+    },
+    {
+      "fileName": "05_story_p009_d9da1de2.webp",
+      "output": "/assets/05_story_p009_d9da1de2.webp",
+      "bytes": 163584
+    },
+    {
+      "fileName": "05_story_p010_68ed001d.webp",
+      "output": "/assets/05_story_p010_68ed001d.webp",
+      "bytes": 153204
+    },
+    {
+      "fileName": "06_story_p008_04621fb6.webp",
+      "output": "/assets/06_story_p008_04621fb6.webp",
+      "bytes": 135522
+    },
+    {
+      "fileName": "06_story_p008_61a91b27.webp",
+      "output": "/assets/06_story_p008_61a91b27.webp",
+      "bytes": 172534
+    },
+    {
+      "fileName": "06_story_p009_7a2d460b.webp",
+      "output": "/assets/06_story_p009_7a2d460b.webp",
+      "bytes": 193132
+    },
+    {
+      "fileName": "06_story_p009_f2d98151.webp",
+      "output": "/assets/06_story_p009_f2d98151.webp",
+      "bytes": 188552
+    },
+    {
+      "fileName": "06_story_p011_aa41c585.webp",
+      "output": "/assets/06_story_p011_aa41c585.webp",
+      "bytes": 179500
+    },
+    {
+      "fileName": "ai_3b85817c.webp",
+      "output": "/assets/ai_3b85817c.webp",
+      "bytes": 26666
+    },
+    {
+      "fileName": "ai_611005db.webp",
+      "output": "/assets/ai_611005db.webp",
+      "bytes": 30560
+    },
+    {
+      "fileName": "ai_b304d2a8.webp",
+      "output": "/assets/ai_b304d2a8.webp",
+      "bytes": 200182
+    },
+    {
+      "fileName": "ai_c82d8395.webp",
+      "output": "/assets/ai_c82d8395.webp",
+      "bytes": 80674
+    },
+    {
+      "fileName": "bokukko_06a09531.webp",
+      "output": "/assets/bokukko_06a09531.webp",
+      "bytes": 94834
+    },
+    {
+      "fileName": "bokukko_5e1d673c.webp",
+      "output": "/assets/bokukko_5e1d673c.webp",
+      "bytes": 40358
+    },
+    {
+      "fileName": "bokukko_e1c2cff1.webp",
+      "output": "/assets/bokukko_e1c2cff1.webp",
+      "bytes": 27912
+    },
+    {
+      "fileName": "bokukko_f33ea16a.webp",
+      "output": "/assets/bokukko_f33ea16a.webp",
+      "bytes": 78188
+    },
+    {
+      "fileName": "commission-takanashi-rina_a2bdbe63.webp",
+      "output": "/assets/commission-takanashi-rina_a2bdbe63.webp",
+      "bytes": 176708
+    },
+    {
+      "fileName": "commission-takenoshita-chiharu_692f6a99.webp",
+      "output": "/assets/commission-takenoshita-chiharu_692f6a99.webp",
+      "bytes": 200280
+    },
+    {
+      "fileName": "douki_065e9a8f.webp",
+      "output": "/assets/douki_065e9a8f.webp",
+      "bytes": 86120
+    },
+    {
+      "fileName": "douki_32d551ce.webp",
+      "output": "/assets/douki_32d551ce.webp",
+      "bytes": 26082
+    },
+    {
+      "fileName": "douki_6eebdf20.webp",
+      "output": "/assets/douki_6eebdf20.webp",
+      "bytes": 72458
+    },
+    {
+      "fileName": "douki_c582aac9.webp",
+      "output": "/assets/douki_c582aac9.webp",
+      "bytes": 21456
+    },
+    {
+      "fileName": "ginpatsu_267dad0d.webp",
+      "output": "/assets/ginpatsu_267dad0d.webp",
+      "bytes": 37434
+    },
+    {
+      "fileName": "ginpatsu_37482487.webp",
+      "output": "/assets/ginpatsu_37482487.webp",
+      "bytes": 22704
+    },
+    {
+      "fileName": "ginpatsu_94888a8f.webp",
+      "output": "/assets/ginpatsu_94888a8f.webp",
+      "bytes": 92338
+    },
+    {
+      "fileName": "ginpatsu_9840d87e.webp",
+      "output": "/assets/ginpatsu_9840d87e.webp",
+      "bytes": 219606
+    },
+    {
+      "fileName": "haishinsha_0b310757.webp",
+      "output": "/assets/haishinsha_0b310757.webp",
+      "bytes": 221472
+    },
+    {
+      "fileName": "haishinsha_7b03b1ce.webp",
+      "output": "/assets/haishinsha_7b03b1ce.webp",
+      "bytes": 17622
+    },
+    {
+      "fileName": "haishinsha_97c8bdd3.webp",
+      "output": "/assets/haishinsha_97c8bdd3.webp",
+      "bytes": 44754
+    },
+    {
+      "fileName": "haishinsha_e56ecc07.webp",
+      "output": "/assets/haishinsha_e56ecc07.webp",
+      "bytes": 94188
+    },
+    {
+      "fileName": "hatsukoi-lab-heart-stamp_89259afa.webp",
+      "output": "/assets/hatsukoi-lab-heart-stamp_89259afa.webp",
+      "bytes": 233004
+    },
+    {
+      "fileName": "hatsukoi-lab-hero-paper_472872bc.webp",
+      "output": "/assets/hatsukoi-lab-hero-paper_472872bc.webp",
+      "bytes": 72190
+    },
+    {
+      "fileName": "hatsukoi-lab-logo_aaa687fb.png",
+      "output": "/assets/hatsukoi-lab-logo_aaa687fb.png",
+      "bytes": 590416
+    },
+    {
+      "fileName": "hatsukoi-lab-note-tab_ee01f895.webp",
+      "output": "/assets/hatsukoi-lab-note-tab_ee01f895.webp",
+      "bytes": 50732
+    },
+    {
+      "fileName": "hatsukoi-lab-ogp-final_97d43560.png",
+      "output": "/assets/hatsukoi-lab-ogp-final_97d43560.png",
+      "bytes": 919853
+    },
+    {
+      "fileName": "hatsukoi-lab-roster-paper_70ee4e26.webp",
+      "output": "/assets/hatsukoi-lab-roster-paper_70ee4e26.webp",
+      "bytes": 89384
+    },
+    {
+      "fileName": "hatsukoi-lab-store-booth_f7378119.png",
+      "output": "/assets/hatsukoi-lab-store-booth_f7378119.png",
+      "bytes": 3901
+    },
+    {
+      "fileName": "hatsukoi-lab-store-dlsite_0b7b6d6e.jpg",
+      "output": "/assets/hatsukoi-lab-store-dlsite_0b7b6d6e.jpg",
+      "bytes": 10093
+    },
+    {
+      "fileName": "hatsukoi-lab-store-fanza_fdee40e4.png",
+      "output": "/assets/hatsukoi-lab-store-fanza_fdee40e4.png",
+      "bytes": 2690
+    },
+    {
+      "fileName": "hatsukoi-lab-store-xtoon_db70dc42.jpg",
+      "output": "/assets/hatsukoi-lab-store-xtoon_db70dc42.jpg",
+      "bytes": 4905
+    },
+    {
+      "fileName": "heroines-generation-one-group_b9ba1dcf.webp",
+      "output": "/assets/heroines-generation-one-group_b9ba1dcf.webp",
+      "bytes": 212018
+    },
+    {
+      "fileName": "heroines-generation-two-pair-clean_c6b665f3.webp",
+      "output": "/assets/heroines-generation-two-pair-clean_c6b665f3.webp",
+      "bytes": 164356
+    },
+    {
+      "fileName": "koito_44a5c872.webp",
+      "output": "/assets/koito_44a5c872.webp",
+      "bytes": 17494
+    },
+    {
+      "fileName": "koito_877c0272.webp",
+      "output": "/assets/koito_877c0272.webp",
+      "bytes": 39252
+    },
+    {
+      "fileName": "koito_9199d405.webp",
+      "output": "/assets/koito_9199d405.webp",
+      "bytes": 69884
+    },
+    {
+      "fileName": "koito_dd12bdaa.webp",
+      "output": "/assets/koito_dd12bdaa.webp",
+      "bytes": 186970
+    },
+    {
+      "fileName": "kouhai_21719b9d.webp",
+      "output": "/assets/kouhai_21719b9d.webp",
+      "bytes": 38062
+    },
+    {
+      "fileName": "kouhai_27710c81.webp",
+      "output": "/assets/kouhai_27710c81.webp",
+      "bytes": 226906
+    },
+    {
+      "fileName": "kouhai_8ae56c40.webp",
+      "output": "/assets/kouhai_8ae56c40.webp",
+      "bytes": 97462
+    },
+    {
+      "fileName": "kouhai_99e7cb12.webp",
+      "output": "/assets/kouhai_99e7cb12.webp",
+      "bytes": 26534
+    },
+    {
+      "fileName": "michiba-top-headshot_fab31699.webp",
+      "output": "/assets/michiba-top-headshot_fab31699.webp",
+      "bytes": 29084
+    },
+    {
+      "fileName": "michiba_neutral_da8d690e.webp",
+      "output": "/assets/michiba_neutral_da8d690e.webp",
+      "bytes": 105470
+    },
+    {
+      "fileName": "michiba_result_86d25654.webp",
+      "output": "/assets/michiba_result_86d25654.webp",
+      "bytes": 159588
+    },
+    {
+      "fileName": "michiba_shock_b310f358.webp",
+      "output": "/assets/michiba_shock_b310f358.webp",
+      "bytes": 155322
+    },
+    {
+      "fileName": "michiba_solve_1cc47326.webp",
+      "output": "/assets/michiba_solve_1cc47326.webp",
+      "bytes": 157814
+    },
+    {
+      "fileName": "michiba_speaking_c6eed801.webp",
+      "output": "/assets/michiba_speaking_c6eed801.webp",
+      "bytes": 155102
+    },
+    {
+      "fileName": "michiba_thinking_594a080a.webp",
+      "output": "/assets/michiba_thinking_594a080a.webp",
+      "bytes": 144846
+    },
+    {
+      "fileName": "mizuki_0b276bec.webp",
+      "output": "/assets/mizuki_0b276bec.webp",
+      "bytes": 228906
+    },
+    {
+      "fileName": "mizuki_76484601.webp",
+      "output": "/assets/mizuki_76484601.webp",
+      "bytes": 32638
+    },
+    {
+      "fileName": "mizuki_a92b151a.webp",
+      "output": "/assets/mizuki_a92b151a.webp",
+      "bytes": 22654
+    },
+    {
+      "fileName": "mizuki_ace5b1e9.webp",
+      "output": "/assets/mizuki_ace5b1e9.webp",
+      "bytes": 96514
+    },
+    {
+      "fileName": "narumi-top-headshot_f6117d14.webp",
+      "output": "/assets/narumi-top-headshot_f6117d14.webp",
+      "bytes": 19668
+    },
+    {
+      "fileName": "narumi_cheer_1035aac7.webp",
+      "output": "/assets/narumi_cheer_1035aac7.webp",
+      "bytes": 151440
+    },
+    {
+      "fileName": "narumi_guide_c5705590.webp",
+      "output": "/assets/narumi_guide_c5705590.webp",
+      "bytes": 153910
+    },
+    {
+      "fileName": "narumi_neutral_e526a618.webp",
+      "output": "/assets/narumi_neutral_e526a618.webp",
+      "bytes": 138116
+    },
+    {
+      "fileName": "narumi_reaction_8324af86.webp",
+      "output": "/assets/narumi_reaction_8324af86.webp",
+      "bytes": 153926
+    },
+    {
+      "fileName": "narumi_surprise_4e1f8acc.webp",
+      "output": "/assets/narumi_surprise_4e1f8acc.webp",
+      "bytes": 159130
+    },
+    {
+      "fileName": "narumi_sympathy_1010cb38.webp",
+      "output": "/assets/narumi_sympathy_1010cb38.webp",
+      "bytes": 138116
+    },
+    {
+      "fileName": "natsu_095b7b16.webp",
+      "output": "/assets/natsu_095b7b16.webp",
+      "bytes": 77182
+    },
+    {
+      "fileName": "natsu_6cb31210.webp",
+      "output": "/assets/natsu_6cb31210.webp",
+      "bytes": 37648
+    },
+    {
+      "fileName": "natsu_7104d26d.webp",
+      "output": "/assets/natsu_7104d26d.webp",
+      "bytes": 223612
+    },
+    {
+      "fileName": "natsu_f21ef3d6.webp",
+      "output": "/assets/natsu_f21ef3d6.webp",
+      "bytes": 19722
+    },
+    {
+      "fileName": "ogp_ai.jpg",
+      "output": "/assets/ogp_ai.jpg",
+      "bytes": 174415
+    },
+    {
+      "fileName": "ogp_bokukko.jpg",
+      "output": "/assets/ogp_bokukko.jpg",
+      "bytes": 168976
+    },
+    {
+      "fileName": "ogp_diagnosis_gameover.jpg",
+      "output": "/assets/ogp_diagnosis_gameover.jpg",
+      "bytes": 174228
+    },
+    {
+      "fileName": "ogp_douki.jpg",
+      "output": "/assets/ogp_douki.jpg",
+      "bytes": 170024
+    },
+    {
+      "fileName": "ogp_ginpatsu.jpg",
+      "output": "/assets/ogp_ginpatsu.jpg",
+      "bytes": 173567
+    },
+    {
+      "fileName": "ogp_haishinsha.jpg",
+      "output": "/assets/ogp_haishinsha.jpg",
+      "bytes": 183700
+    },
+    {
+      "fileName": "ogp_koito.jpg",
+      "output": "/assets/ogp_koito.jpg",
+      "bytes": 168290
+    },
+    {
+      "fileName": "ogp_kouhai.jpg",
+      "output": "/assets/ogp_kouhai.jpg",
+      "bytes": 181623
+    },
+    {
+      "fileName": "ogp_mizuki.jpg",
+      "output": "/assets/ogp_mizuki.jpg",
+      "bytes": 164258
+    },
+    {
+      "fileName": "ogp_natsu.jpg",
+      "output": "/assets/ogp_natsu.jpg",
+      "bytes": 164751
+    },
+    {
+      "fileName": "round_full_256_1fd443ec.png",
+      "output": "/assets/round_full_256_1fd443ec.png",
+      "bytes": 21179
+    },
+    {
+      "fileName": "round_full_512_e59995c4.png",
+      "output": "/assets/round_full_512_e59995c4.png",
+      "bytes": 44561
+    },
+    {
+      "fileName": "round_full_64_aa4be6e5.png",
+      "output": "/assets/round_full_64_aa4be6e5.png",
+      "bytes": 4162
+    },
+    {
+      "fileName": "round_mono_18090b73.svg",
+      "output": "/assets/round_mono_18090b73.svg",
+      "bytes": 13414
+    },
+    {
+      "fileName": "tube_full_1bee8d1e.svg",
+      "output": "/assets/tube_full_1bee8d1e.svg",
+      "bytes": 13819
+    }
+  ]
+}

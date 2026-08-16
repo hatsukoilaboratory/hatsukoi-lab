@@ -1,0 +1,2645 @@
+{
+  "version": "1.0",
+  "description": "初恋ラボ適性診断 MVP 通常質問データ。各scoresは現時点では+1固定。",
+  "selection": {
+    "questionsPerPlay": 8,
+    "allowRepeat": false,
+    "avoidSameCategoryBackToBack": true,
+    "futureAdaptiveSelection": true
+  },
+  "questions": [
+    {
+      "id": "Q101",
+      "category": "relationship",
+      "prompt": "どんな子と付き合いたい？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q101_01",
+          "label": "ずっと一緒にいた女の子",
+          "scores": {
+            "ginpatsu": 1,
+            "douki": 1,
+            "natsu": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q101_02",
+          "label": "久々に会ってドキっとした女の子",
+          "scores": {
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q101_03",
+          "label": "ずっと片思いしてた憧れの女の子",
+          "scores": {
+            "koito": 1,
+            "haishinsha": 1,
+            "mizuki": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q102",
+      "category": "relationship",
+      "prompt": "女の子との関係性は？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q102_01",
+          "label": "彼女が後輩",
+          "scores": {
+            "kouhai": 1,
+            "ai": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q102_02",
+          "label": "彼女と同級生・同期",
+          "scores": {
+            "douki": 1,
+            "natsu": 1,
+            "ginpatsu": 1,
+            "bokukko": 1,
+            "koito": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q102_03",
+          "label": "彼女が先輩",
+          "scores": {},
+          "knockout": true,
+          "gameOverKey": "older_senpai"
+        }
+      ]
+    },
+    {
+      "id": "Q103",
+      "category": "relationship",
+      "prompt": "恋愛になる前、どれくらいの関係性から始めたい？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q103_01",
+          "label": "もう家族みたいな仲",
+          "scores": {
+            "ginpatsu": 1
+          }
+        },
+        {
+          "id": "Q103_02",
+          "label": "普通の友達くらい",
+          "scores": {
+            "douki": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q103_03",
+          "label": "まだちょっと距離がある",
+          "scores": {
+            "kouhai": 1,
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q103_04",
+          "label": "ほぼ知らないところから",
+          "scores": {
+            "haishinsha": 1,
+            "ai": 1,
+            "mizuki": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q104",
+      "category": "romance_temperature",
+      "prompt": "付き合うまでの彼女の気持ちの変遷は？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q104_01",
+          "label": "ずっと好きだった",
+          "scores": {
+            "ginpatsu": 1,
+            "bokukko": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q104_02",
+          "label": "少しずつ好きになる",
+          "scores": {
+            "douki": 1,
+            "koito": 1,
+            "haishinsha": 1,
+            "ai": 1,
+            "natsu": 1,
+            "mizuki": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q105",
+      "category": "relationship",
+      "prompt": "恋人になったあと、人前での関係性は変えたい？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q105_01",
+          "label": "付き合う前と変わらない方がいい",
+          "scores": {
+            "ginpatsu": 1,
+            "douki": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q105_02",
+          "label": "少しずつ恋人らしく",
+          "scores": {
+            "koito": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q105_03",
+          "label": "ガッツリ恋人っぽく過ごしたい",
+          "scores": {
+            "kouhai": 1,
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q105_04",
+          "label": "自分にだけ見せてほしい",
+          "scores": {
+            "ai": 1,
+            "bokukko": 1,
+            "mizuki": 1,
+            "natsu": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q106",
+      "category": "communication",
+      "prompt": "自分が落ち込んでいる時は？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q106_01",
+          "label": "黙って隣にいてほしい",
+          "scores": {
+            "ginpatsu": 1,
+            "mizuki": 1,
+            "haishinsha": 1,
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q106_02",
+          "label": "励ましてほしい",
+          "scores": {
+            "kouhai": 1,
+            "ai": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q106_03",
+          "label": "くだらない話で笑わせてほしい",
+          "scores": {
+            "natsu": 1,
+            "douki": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q107",
+      "category": "personality",
+      "prompt": "好きな子には弱いところを見せてほしい？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q107_01",
+          "label": "かなり見せてほしい",
+          "scores": {
+            "haishinsha": 1,
+            "mizuki": 1,
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q107_02",
+          "label": "たまに見えるくらいがいい",
+          "scores": {
+            "ginpatsu": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q107_03",
+          "label": "強がってるところも好き",
+          "scores": {
+            "bokukko": 1,
+            "natsu": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q107_04",
+          "label": "あまりこだわらない",
+          "scores": {
+            "douki": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q108",
+      "category": "personality",
+      "prompt": "普段とのギャップならどれ？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q108_01",
+          "label": "静かな子が自分にはよく笑う",
+          "scores": {
+            "ginpatsu": 1,
+            "mizuki": 1,
+            "haishinsha": 1,
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q108_02",
+          "label": "元気な子が自分には弱音を吐く",
+          "scores": {
+            "kouhai": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q108_03",
+          "label": "友達っぽい子が急に女の子らしくなる",
+          "scores": {
+            "bokukko": 1,
+            "natsu": 1,
+            "douki": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q109",
+      "category": "personality",
+      "prompt": "好きな子の性格は？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q109_01",
+          "label": "穏やか",
+          "scores": {
+            "ginpatsu": 1,
+            "koito": 1,
+            "haishinsha": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q109_02",
+          "label": "まっすぐ",
+          "scores": {
+            "kouhai": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q109_03",
+          "label": "気安い",
+          "scores": {
+            "douki": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q109_04",
+          "label": "掴みどころがない",
+          "scores": {
+            "mizuki": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q110",
+      "category": "communication",
+      "prompt": "話していて楽しいのは？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q110_01",
+          "label": "沈黙も平気な子",
+          "scores": {
+            "ginpatsu": 1,
+            "mizuki": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q110_02",
+          "label": "よく笑ってくれる子",
+          "scores": {
+            "kouhai": 1,
+            "ai": 1,
+            "koito": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q110_03",
+          "label": "冗談も言い合える子",
+          "scores": {
+            "natsu": 1,
+            "douki": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q205",
+      "category": "relationship",
+      "prompt": "恋愛で“運命”を感じるのは？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q205_01",
+          "label": "ずっとそばにいたこと",
+          "scores": {
+            "ginpatsu": 1,
+            "koito": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q205_02",
+          "label": "再会したこと",
+          "scores": {
+            "bokukko": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q205_03",
+          "label": "偶然秘密を知ったこと",
+          "scores": {
+            "mizuki": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q205_04",
+          "label": "特別なことなんてなくてもいい",
+          "scores": {
+            "natsu": 1,
+            "douki": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q206",
+      "category": "relationship",
+      "prompt": "好きな恋の形は？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q206_01",
+          "label": "初恋がそのまま実る",
+          "scores": {
+            "ginpatsu": 1,
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q206_02",
+          "label": "昔の相手にもう一度惹かれる",
+          "scores": {
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q206_03",
+          "label": "友達から恋人になる",
+          "scores": {
+            "douki": 1,
+            "natsu": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q206_04",
+          "label": "予想外の相手と近づく",
+          "scores": {
+            "mizuki": 1,
+            "ai": 1,
+            "haishinsha": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q207",
+      "category": "relationship",
+      "prompt": "付き合う前の期間はどれくらいが好き？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q207_01",
+          "label": "かなり長い方が好き",
+          "scores": {
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q207_02",
+          "label": "少しずつでいい",
+          "scores": {
+            "ai": 1,
+            "douki": 1,
+            "kouhai": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q207_03",
+          "label": "事件一つで一気に進んでもいい",
+          "scores": {
+            "natsu": 1,
+            "mizuki": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q207_04",
+          "label": "友達期間が長ければ恋愛編は早くてもいい",
+          "scores": {
+            "ginpatsu": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q208",
+      "category": "relationship",
+      "prompt": "恋愛相手とは似ていたい？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q208_01",
+          "label": "かなり似ていたい",
+          "scores": {
+            "natsu": 1,
+            "ai": 1,
+            "douki": 1
+          }
+        },
+        {
+          "id": "Q208_02",
+          "label": "少し違うくらい",
+          "scores": {
+            "koito": 1,
+            "kouhai": 1,
+            "ginpatsu": 1
+          }
+        },
+        {
+          "id": "Q208_03",
+          "label": "全然違う方が面白い",
+          "scores": {
+            "mizuki": 1,
+            "haishinsha": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q208_04",
+          "label": "自分の知らない世界を持っていてほしい",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q209",
+      "category": "relationship",
+      "prompt": "主人公との理想の距離は？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q209_01",
+          "label": "肩が触れても気にならない",
+          "scores": {
+            "bokukko": 1,
+            "kouhai": 1,
+            "koito": 1,
+            "haishinsha": 1,
+            "ginpatsu": 1
+          }
+        },
+        {
+          "id": "Q209_02",
+          "label": "近づくたび緊張する",
+          "scores": {}
+        },
+        {
+          "id": "Q209_03",
+          "label": "遠慮なくぶつかれる",
+          "scores": {
+            "ai": 1,
+            "natsu": 1,
+            "douki": 1
+          }
+        },
+        {
+          "id": "Q209_04",
+          "label": "他人には見せない距離感",
+          "scores": {
+            "mizuki": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q210",
+      "category": "relationship",
+      "prompt": "二人の間に一番必要なのは？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q210_01",
+          "label": "安心",
+          "scores": {
+            "ginpatsu": 1,
+            "kouhai": 1,
+            "koito": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q210_02",
+          "label": "信頼",
+          "scores": {
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q210_03",
+          "label": "楽しさ",
+          "scores": {
+            "douki": 1
+          }
+        },
+        {
+          "id": "Q210_04",
+          "label": "秘密",
+          "scores": {}
+        },
+        {
+          "id": "Q210_05",
+          "label": "自然さ",
+          "scores": {
+            "ai": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q213",
+      "category": "relationship",
+      "prompt": "付き合った後に一番見たいのは？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q213_01",
+          "label": "何も変わらない日常",
+          "scores": {
+            "douki": 1,
+            "ginpatsu": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q213_02",
+          "label": "初々しい進展",
+          "scores": {
+            "haishinsha": 1,
+            "bokukko": 1,
+            "koito": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q213_03",
+          "label": "恋人になってから甘くなる",
+          "scores": {
+            "mizuki": 1,
+            "bokukko": 1,
+            "koito": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q213_04",
+          "label": "友達ノリと恋人感の混在",
+          "scores": {
+            "douki": 1,
+            "ai": 1,
+            "natsu": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q215",
+      "category": "relationship",
+      "prompt": "手をつなぐなら？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q215_01",
+          "label": "自然にいつの間にか",
+          "scores": {
+            "ginpatsu": 1,
+            "douki": 1
+          }
+        },
+        {
+          "id": "Q215_02",
+          "label": "勇気を出してそっと",
+          "scores": {
+            "koito": 1,
+            "haishinsha": 1,
+            "bokukko": 1,
+            "mizuki": 1
+          }
+        },
+        {
+          "id": "Q215_03",
+          "label": "向こうからぎゅっと",
+          "scores": {
+            "ai": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q215_04",
+          "label": "勢いでつないでから照れる",
+          "scores": {
+            "natsu": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q216",
+      "category": "relationship",
+      "prompt": "告白はどっちからが好き？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q216_01",
+          "label": "相手から言ってほしい",
+          "scores": {
+            "kouhai": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q216_02",
+          "label": "自分から言いたい",
+          "scores": {
+            "ginpatsu": 1,
+            "bokukko": 1,
+            "haishinsha": 1,
+            "mizuki": 1,
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q216_03",
+          "label": "どっちでも流れで",
+          "scores": {
+            "douki": 1
+          }
+        },
+        {
+          "id": "Q216_04",
+          "label": "言葉にしないまま始まってもいい",
+          "scores": {
+            "natsu": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q218",
+      "category": "relationship",
+      "prompt": "告白するならどこが好き？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q218_01",
+          "label": "いつもの帰り道",
+          "scores": {
+            "ginpatsu": 1,
+            "douki": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q218_02",
+          "label": "学校",
+          "scores": {
+            "kouhai": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q218_03",
+          "label": "二人の思い出の場所",
+          "scores": {
+            "koito": 1,
+            "mizuki": 1,
+            "bokukko": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q218_04",
+          "label": "誰にも知られない場所",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q219",
+      "category": "relationship",
+      "prompt": "恋愛で一番見たい変化は？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q219_01",
+          "label": "表情が柔らかくなる",
+          "scores": {
+            "mizuki": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q219_02",
+          "label": "自信がつく",
+          "scores": {
+            "kouhai": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q219_03",
+          "label": "昔とは違う一面が見える",
+          "scores": {
+            "ginpatsu": 1,
+            "douki": 1,
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q219_04",
+          "label": "友達の距離が恋人の距離になる",
+          "scores": {
+            "ai": 1,
+            "natsu": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q220",
+      "category": "relationship",
+      "prompt": "主人公の前だけ変わる子は好き？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q220_01",
+          "label": "めちゃくちゃ好き",
+          "scores": {
+            "mizuki": 1,
+            "natsu": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q220_02",
+          "label": "かなり好き",
+          "scores": {
+            "koito": 1,
+            "natsu": 1,
+            "kouhai": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q220_03",
+          "label": "誰にでも同じ方が好き",
+          "scores": {
+            "kouhai": 1,
+            "ai": 1,
+            "douki": 1,
+            "ginpatsu": 1
+          }
+        },
+        {
+          "id": "Q220_04",
+          "label": "どちらでも",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q223",
+      "category": "personality",
+      "prompt": "好きな“かわいい”は？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q223_01",
+          "label": "本人はかわいいと思っていない",
+          "scores": {
+            "bokukko": 1,
+            "mizuki": 1,
+            "ginpatsu": 1,
+            "haishinsha": 1,
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q223_02",
+          "label": "一生懸命でかわいい",
+          "scores": {
+            "kouhai": 1,
+            "koito": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q223_03",
+          "label": "言動が面白くてかわいい",
+          "scores": {
+            "ai": 1,
+            "douki": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q223_04",
+          "label": "意外な一面がかわいい",
+          "scores": {
+            "natsu": 1,
+            "mizuki": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q224",
+      "category": "personality",
+      "prompt": "好きな“色気”は？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q224_01",
+          "label": "本人に自覚がない",
+          "scores": {
+            "ginpatsu": 1,
+            "bokukko": 1,
+            "kouhai": 1,
+            "koito": 1,
+            "mizuki": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q224_02",
+          "label": "普段とのギャップ",
+          "scores": {
+            "natsu": 1,
+            "mizuki": 1,
+            "haishinsha": 1,
+            "douki": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q224_03",
+          "label": "健康的で明るい",
+          "scores": {
+            "douki": 1,
+            "ai": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q224_04",
+          "label": "まだちょっと初々しい",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q225",
+      "category": "personality",
+      "prompt": "相手の第一印象で惹かれるのは？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q225_01",
+          "label": "安心する",
+          "scores": {
+            "douki": 1,
+            "ai": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q225_02",
+          "label": "かわいい",
+          "scores": {
+            "koito": 1,
+            "ginpatsu": 1,
+            "kouhai": 1,
+            "bokukko": 1,
+            "douki": 1,
+            "haishinsha": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q225_03",
+          "label": "面白そう",
+          "scores": {
+            "natsu": 1,
+            "ai": 1,
+            "douki": 1,
+            "haishinsha": 1,
+            "mizuki": 1,
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q225_04",
+          "label": "何を考えてるか気になる",
+          "scores": {
+            "mizuki": 1,
+            "bokukko": 1,
+            "haishinsha": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q226",
+      "category": "personality",
+      "prompt": "元気な子と静かな子なら？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q226_01",
+          "label": "かなり静かな子",
+          "scores": {
+            "mizuki": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q226_02",
+          "label": "やや静かな子",
+          "scores": {
+            "koito": 1,
+            "bokukko": 1,
+            "ginpatsu": 1
+          }
+        },
+        {
+          "id": "Q226_03",
+          "label": "やや元気な子",
+          "scores": {
+            "kouhai": 1,
+            "douki": 1
+          }
+        },
+        {
+          "id": "Q226_04",
+          "label": "かなり元気な子",
+          "scores": {
+            "ai": 1,
+            "natsu": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q236",
+      "category": "communication",
+      "prompt": "どんな嫉妬がかわいい？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q236_01",
+          "label": "黙ってちょっと不機嫌",
+          "scores": {
+            "ginpatsu": 1,
+            "mizuki": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q236_02",
+          "label": "分かりやすく拗ねる",
+          "scores": {
+            "haishinsha": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q236_03",
+          "label": "強がって否定する",
+          "scores": {
+            "bokukko": 1,
+            "natsu": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q236_04",
+          "label": "平静を装って失敗する",
+          "scores": {
+            "douki": 1,
+            "koito": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q237",
+      "category": "communication",
+      "prompt": "相手からのアプローチは？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q237_01",
+          "label": "ほぼしてこない",
+          "scores": {
+            "mizuki": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q237_02",
+          "label": "勇気を出して一歩ずつ",
+          "scores": {
+            "mizuki": 1,
+            "koito": 1,
+            "haishinsha": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q237_03",
+          "label": "かなりまっすぐ",
+          "scores": {
+            "koito": 1,
+            "ginpatsu": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q237_04",
+          "label": "友達ノリのまま距離を詰める",
+          "scores": {
+            "natsu": 1,
+            "douki": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q240",
+      "category": "communication",
+      "prompt": "二人で無言になったら？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q240_01",
+          "label": "落ち着く",
+          "scores": {
+            "ginpatsu": 1,
+            "ai": 1,
+            "mizuki": 1,
+            "koito": 1,
+            "natsu": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q240_02",
+          "label": "少しドキドキする",
+          "scores": {
+            "bokukko": 1,
+            "haishinsha": 1,
+            "mizuki": 1,
+            "koito": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q240_03",
+          "label": "何かしゃべる",
+          "scores": {
+            "kouhai": 1,
+            "douki": 1,
+            "ai": 1,
+            "koito": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q240_04",
+          "label": "全然気にしない",
+          "scores": {
+            "douki": 1,
+            "ai": 1,
+            "mizuki": 1,
+            "natsu": 1,
+            "ginpatsu": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q241",
+      "category": "communication",
+      "prompt": "突然顔が近くなったら？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q241_01",
+          "label": "二人とも固まる",
+          "scores": {
+            "haishinsha": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q241_02",
+          "label": "どちらかが目を逸らす",
+          "scores": {
+            "mizuki": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q241_03",
+          "label": "照れながら笑う",
+          "scores": {
+            "koito": 1,
+            "ginpatsu": 1
+          }
+        },
+        {
+          "id": "Q241_04",
+          "label": "「近っ」って笑う",
+          "scores": {
+            "natsu": 1,
+            "douki": 1,
+            "ai": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q242",
+      "category": "communication",
+      "prompt": "「好き」はどれくらい言ってほしい？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q242_01",
+          "label": "ほぼ言わなくても分かる",
+          "scores": {
+            "mizuki": 1,
+            "ai": 1,
+            "douki": 1
+          }
+        },
+        {
+          "id": "Q242_02",
+          "label": "時々ちゃんと言ってほしい",
+          "scores": {
+            "ginpatsu": 1,
+            "koito": 1,
+            "bokukko": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q242_03",
+          "label": "かなり言ってほしい",
+          "scores": {
+            "koito": 1,
+            "bokukko": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q242_04",
+          "label": "普段言わない子が突然言うのがいい",
+          "scores": {
+            "mizuki": 1,
+            "natsu": 1,
+            "douki": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q243",
+      "category": "communication",
+      "prompt": "LINEが来るならどれが嬉しい？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q243_01",
+          "label": "用事がある時だけ",
+          "scores": {
+            "mizuki": 1,
+            "bokukko": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q243_02",
+          "label": "毎日おはよう・おやすみ",
+          "scores": {
+            "ginpatsu": 1,
+            "koito": 1,
+            "kouhai": 1,
+            "bokukko": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q243_03",
+          "label": "どうでもいい話を延々",
+          "scores": {
+            "natsu": 1,
+            "douki": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q243_04",
+          "label": "深夜に突然長文",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q244",
+      "category": "communication",
+      "prompt": "電話するなら？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q244_01",
+          "label": "ほぼしない",
+          "scores": {
+            "mizuki": 1
+          }
+        },
+        {
+          "id": "Q244_02",
+          "label": "寝る前に少し",
+          "scores": {
+            "haishinsha": 1,
+            "bokukko": 1,
+            "kouhai": 1,
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q244_03",
+          "label": "何時間でも雑談",
+          "scores": {
+            "natsu": 1,
+            "ai": 1,
+            "douki": 1,
+            "ginpatsu": 1
+          }
+        },
+        {
+          "id": "Q244_04",
+          "label": "誰にも聞かれない時間に",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q245",
+      "category": "communication",
+      "prompt": "帰り際に一番刺さるのは？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q245_01",
+          "label": "「また明日」",
+          "scores": {
+            "ginpatsu": 1,
+            "kouhai": 1,
+            "bokukko": 1,
+            "mizuki": 1
+          }
+        },
+        {
+          "id": "Q245_02",
+          "label": "「もう少し一緒にいたい」",
+          "scores": {
+            "haishinsha": 1,
+            "kouhai": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q245_03",
+          "label": "普段通りに「じゃあな」",
+          "scores": {
+            "douki": 1,
+            "ai": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q245_04",
+          "label": "「帰りたくない」",
+          "scores": {
+            "ginpatsu": 1,
+            "kouhai": 1,
+            "bokukko": 1,
+            "mizuki": 1,
+            "koito": 1,
+            "natsu": 1,
+            "haishinsha": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q248",
+      "category": "communication",
+      "prompt": "相手が夢中になっているものがあったら？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q248_01",
+          "label": "隣で見ていたい",
+          "scores": {}
+        },
+        {
+          "id": "Q248_02",
+          "label": "応援したい",
+          "scores": {
+            "mizuki": 1,
+            "ginpatsu": 1,
+            "kouhai": 1,
+            "bokukko": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q248_03",
+          "label": "一緒にやってみたい",
+          "scores": {
+            "natsu": 1,
+            "ai": 1,
+            "douki": 1,
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q248_04",
+          "label": "その裏側も自分だけには見せてほしい",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q249",
+      "category": "communication",
+      "prompt": "恋人の趣味が自分と違っていたら？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q249_01",
+          "label": "教えてもらいたい",
+          "scores": {}
+        },
+        {
+          "id": "Q249_02",
+          "label": "付き合ってみる",
+          "scores": {}
+        },
+        {
+          "id": "Q249_03",
+          "label": "別々でも全然平気",
+          "scores": {}
+        },
+        {
+          "id": "Q249_04",
+          "label": "面白そうなら乗っかる",
+          "scores": {}
+        }
+      ],
+      "diagnosticWeight": 0,
+      "note": "現状は全選択肢が無配点。休憩質問としてのみ使用するか、後で配点を追加する。"
+    },
+    {
+      "id": "Q252",
+      "category": "scene",
+      "prompt": "放課後ならどこへ行きたい？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q252_01",
+          "label": "まっすぐ一緒に帰る",
+          "scores": {
+            "ai": 1,
+            "koito": 1,
+            "haishinsha": 1,
+            "bokukko": 1,
+            "ginpatsu": 1,
+            "douki": 1
+          }
+        },
+        {
+          "id": "Q252_02",
+          "label": "部活や学校に残る",
+          "scores": {
+            "mizuki": 1,
+            "natsu": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q252_03",
+          "label": "寄り道する",
+          "scores": {
+            "koito": 1,
+            "natsu": 1,
+            "haishinsha": 1,
+            "ginpatsu": 1,
+            "kouhai": 1,
+            "douki": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q252_04",
+          "label": "誰にも知られない場所へ",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q253",
+      "category": "scene",
+      "prompt": "雨宿りするなら？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q253_01",
+          "label": "軒下で静かに待つ",
+          "scores": {
+            "bokukko": 1,
+            "mizuki": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q253_02",
+          "label": "コンビニへ走る",
+          "scores": {
+            "ai": 1,
+            "natsu": 1,
+            "douki": 1
+          }
+        },
+        {
+          "id": "Q253_03",
+          "label": "相合傘で帰る",
+          "scores": {
+            "ginpatsu": 1,
+            "kouhai": 1,
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q253_04",
+          "label": "そのまま部屋で動画を見る",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q254",
+      "category": "scene",
+      "prompt": "夏に一緒に行くなら？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q254_01",
+          "label": "近所の夏祭り",
+          "scores": {
+            "koito": 1,
+            "ginpatsu": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q254_02",
+          "label": "海やプール",
+          "scores": {
+            "ai": 1,
+            "natsu": 1,
+            "bokukko": 1,
+            "ginpatsu": 1
+          }
+        },
+        {
+          "id": "Q254_03",
+          "label": "涼しい屋内",
+          "scores": {
+            "haishinsha": 1,
+            "mizuki": 1,
+            "douki": 1
+          }
+        },
+        {
+          "id": "Q254_04",
+          "label": "何となく街を歩く",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q255",
+      "category": "scene",
+      "prompt": "冬なら？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q255_01",
+          "label": "家でぬくぬく",
+          "scores": {
+            "douki": 1,
+            "ai": 1,
+            "natsu": 1,
+            "haishinsha": 1,
+            "mizuki": 1
+          }
+        },
+        {
+          "id": "Q255_02",
+          "label": "イルミネーション",
+          "scores": {
+            "ginpatsu": 1,
+            "koito": 1,
+            "bokukko": 1,
+            "kouhai": 1,
+            "mizuki": 1
+          }
+        },
+        {
+          "id": "Q255_03",
+          "label": "静かな喫茶店",
+          "scores": {}
+        },
+        {
+          "id": "Q255_04",
+          "label": "意味もなく街を歩く",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q256",
+      "category": "scene",
+      "prompt": "休日デートは計画する？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q256_01",
+          "label": "全部決めたい",
+          "scores": {
+            "ginpatsu": 1,
+            "koito": 1,
+            "haishinsha": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q256_02",
+          "label": "目的だけ決める",
+          "scores": {}
+        },
+        {
+          "id": "Q256_03",
+          "label": "その日の気分",
+          "scores": {
+            "douki": 1,
+            "natsu": 1,
+            "mizuki": 1,
+            "ai": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q256_04",
+          "label": "そもそも家から出なくていい",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q257",
+      "category": "scene",
+      "prompt": "一緒に食べるなら？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q257_01",
+          "label": "家で簡単なもの",
+          "scores": {
+            "douki": 1,
+            "ginpatsu": 1,
+            "kouhai": 1,
+            "mizuki": 1,
+            "koito": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q257_02",
+          "label": "ちょっとかわいい店",
+          "scores": {
+            "ginpatsu": 1,
+            "koito": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q257_03",
+          "label": "行き当たりばったりの店",
+          "scores": {
+            "natsu": 1,
+            "koito": 1,
+            "ai": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q257_04",
+          "label": "静かな店",
+          "scores": {
+            "mizuki": 1,
+            "haishinsha": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q258",
+      "category": "scene",
+      "prompt": "二人で買い物するなら？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q258_01",
+          "label": "日用品",
+          "scores": {
+            "douki": 1,
+            "natsu": 1,
+            "bokukko": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q258_02",
+          "label": "服",
+          "scores": {
+            "kouhai": 1,
+            "ginpatsu": 1,
+            "haishinsha": 1,
+            "ai": 1,
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q258_03",
+          "label": "本や画材",
+          "scores": {
+            "mizuki": 1,
+            "bokukko": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q258_04",
+          "label": "趣味のもの",
+          "scores": {
+            "mizuki": 1,
+            "natsu": 1,
+            "haishinsha": 1,
+            "koito": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q259",
+      "category": "scene",
+      "prompt": "二人きりになった時、何が起きてほしい？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q259_01",
+          "label": "何も起きなくていい",
+          "scores": {
+            "natsu": 1,
+            "ginpatsu": 1,
+            "douki": 1,
+            "ai": 1,
+            "mizuki": 1
+          }
+        },
+        {
+          "id": "Q259_02",
+          "label": "少し気まずくなってほしい",
+          "scores": {}
+        },
+        {
+          "id": "Q259_03",
+          "label": "一気に意識してほしい",
+          "scores": {
+            "kouhai": 1,
+            "bokukko": 1,
+            "haishinsha": 1,
+            "mizuki": 1,
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q259_04",
+          "label": "普段話せない秘密を話してほしい",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q260",
+      "category": "scene",
+      "prompt": "恋人と写真を撮るなら？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q260_01",
+          "label": "ほとんど撮らない",
+          "scores": {
+            "mizuki": 1,
+            "natsu": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q260_02",
+          "label": "二人の記念に残したい",
+          "scores": {
+            "mizuki": 1,
+            "ai": 1,
+            "koito": 1,
+            "bokukko": 1,
+            "ginpatsu": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q260_03",
+          "label": "変な写真ばかり撮る",
+          "scores": {
+            "natsu": 1,
+            "douki": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q260_04",
+          "label": "人には見せない写真を残す",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q261",
+      "category": "scene",
+      "prompt": "二人の思い出として強いのは？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q261_01",
+          "label": "子どもの頃の記憶",
+          "scores": {
+            "ginpatsu": 1,
+            "kouhai": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q261_02",
+          "label": "一緒に頑張った出来事",
+          "scores": {
+            "mizuki": 1,
+            "koito": 1,
+            "kouhai": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q261_03",
+          "label": "いつもの日常",
+          "scores": {
+            "koito": 1,
+            "natsu": 1,
+            "ai": 1,
+            "douki": 1
+          }
+        },
+        {
+          "id": "Q261_04",
+          "label": "二人しか知らない秘密",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q262",
+      "category": "scene",
+      "prompt": "好きな子の部屋で嬉しいのは？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q262_01",
+          "label": "昔の思い出の品がある",
+          "scores": {
+            "ginpatsu": 1,
+            "koito": 1,
+            "kouhai": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q262_02",
+          "label": "自分からもらった物がある",
+          "scores": {
+            "koito": 1,
+            "ginpatsu": 1,
+            "kouhai": 1,
+            "bokukko": 1,
+            "douki": 1,
+            "haishinsha": 1,
+            "ai": 1,
+            "mizuki": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q262_03",
+          "label": "知らなかった趣味がある",
+          "scores": {
+            "mizuki": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q262_04",
+          "label": "普通の生活感が見える",
+          "scores": {
+            "mizuki": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q263",
+      "category": "scene",
+      "prompt": "二人で料理をするなら？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q263_01",
+          "label": "静かに一緒に作る",
+          "scores": {
+            "mizuki": 1,
+            "haishinsha": 1,
+            "douki": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q263_02",
+          "label": "教えてもらう／教える",
+          "scores": {
+            "ginpatsu": 1,
+            "koito": 1,
+            "ai": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q263_03",
+          "label": "適当に作って失敗する",
+          "scores": {
+            "natsu": 1,
+            "douki": 1
+          }
+        },
+        {
+          "id": "Q263_04",
+          "label": "変わった料理に挑戦する",
+          "scores": {
+            "natsu": 1,
+            "ai": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q264",
+      "category": "scene",
+      "prompt": "旅行で予定が全部崩れたら？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q264_01",
+          "label": "宿でのんびり",
+          "scores": {
+            "douki": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q264_02",
+          "label": "別案をすぐ考える",
+          "scores": {
+            "koito": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q264_03",
+          "label": "適当に歩く",
+          "scores": {
+            "ginpatsu": 1,
+            "mizuki": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q264_04",
+          "label": "むしろ予定外を楽しむ",
+          "scores": {
+            "natsu": 1,
+            "kouhai": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q266",
+      "category": "scene",
+      "prompt": "一日だけ学生時代に戻れるなら？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q266_01",
+          "label": "いつもの帰り道をもう一度",
+          "scores": {
+            "ginpatsu": 1,
+            "kouhai": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q266_02",
+          "label": "部活や放課後をやり直す",
+          "scores": {
+            "mizuki": 1,
+            "haishinsha": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q266_03",
+          "label": "友達とだらだらする",
+          "scores": {
+            "natsu": 1,
+            "douki": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q266_04",
+          "label": "あの時言えなかったことを言う",
+          "scores": {
+            "bokukko": 1,
+            "koito": 1,
+            "mizuki": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q268",
+      "category": "romance_temperature",
+      "prompt": "恋が進むテンポは？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q268_01",
+          "label": "かなりゆっくり",
+          "scores": {
+            "koito": 1,
+            "ai": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q268_02",
+          "label": "少しずつ",
+          "scores": {
+            "koito": 1,
+            "mizuki": 1,
+            "ai": 1,
+            "haishinsha": 1,
+            "douki": 1,
+            "bokukko": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q268_03",
+          "label": "きっかけ一つで一気に",
+          "scores": {
+            "natsu": 1,
+            "mizuki": 1,
+            "haishinsha": 1
+          }
+        },
+        {
+          "id": "Q268_04",
+          "label": "最初から距離が近くてもいい",
+          "scores": {
+            "ginpatsu": 1,
+            "ai": 1,
+            "douki": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q269",
+      "category": "romance_temperature",
+      "prompt": "恋愛で一番大事にしたいときめきは？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q269_01",
+          "label": "相手の成長を見守る",
+          "scores": {}
+        },
+        {
+          "id": "Q269_02",
+          "label": "昔と違う姿に惹かれる",
+          "scores": {
+            "bokukko": 1,
+            "kouhai": 1,
+            "mizuki": 1
+          }
+        },
+        {
+          "id": "Q269_03",
+          "label": "言えない気持ちが少しずつ伝わる",
+          "scores": {
+            "douki": 1,
+            "haishinsha": 1,
+            "mizuki": 1
+          }
+        },
+        {
+          "id": "Q269_04",
+          "label": "日常がいつの間にか特別になる",
+          "scores": {
+            "ai": 1,
+            "koito": 1,
+            "natsu": 1,
+            "ginpatsu": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q270",
+      "category": "romance_temperature",
+      "prompt": "恋愛漫画を読み終わった時、何を思いたい？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q270_01",
+          "label": "この二人ならずっと一緒にいそう",
+          "scores": {
+            "ginpatsu": 1,
+            "kouhai": 1,
+            "bokukko": 1,
+            "douki": 1,
+            "haishinsha": 1,
+            "ai": 1,
+            "mizuki": 1,
+            "koito": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q270_02",
+          "label": "二人とも成長したな",
+          "scores": {
+            "mizuki": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q270_03",
+          "label": "やっとくっついた！",
+          "scores": {
+            "koito": 1,
+            "bokukko": 1,
+            "haishinsha": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q270_04",
+          "label": "こいつら相変わらずだな",
+          "scores": {
+            "natsu": 1,
+            "ai": 1,
+            "douki": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q271",
+      "category": "romance_temperature",
+      "prompt": "恋の障害として好きなのは？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q271_01",
+          "label": "自分の気持ちに気づかない",
+          "scores": {
+            "douki": 1,
+            "ginpatsu": 1,
+            "ai": 1,
+            "koito": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q271_02",
+          "label": "勇気が出ない",
+          "scores": {
+            "kouhai": 1,
+            "bokukko": 1,
+            "haishinsha": 1,
+            "mizuki": 1,
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q271_03",
+          "label": "昔と今の違い",
+          "scores": {
+            "bokukko": 1,
+            "mizuki": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q271_04",
+          "label": "秘密を言えない",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q272",
+      "category": "romance_temperature",
+      "prompt": "恋のライバルは必要？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q272_01",
+          "label": "いらない",
+          "scores": {
+            "ginpatsu": 1,
+            "kouhai": 1,
+            "mizuki": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q272_02",
+          "label": "少しくらいなら",
+          "scores": {
+            "bokukko": 1,
+            "haishinsha": 1,
+            "douki": 1
+          }
+        },
+        {
+          "id": "Q272_03",
+          "label": "友達関係が揺れる程度なら",
+          "scores": {
+            "koito": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q272_04",
+          "label": "恋敵より秘密や事情が障害の方が好き",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q276",
+      "category": "appearance",
+      "prompt": "女の子の魅力で最初に見るのは？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q276_01",
+          "label": "表情",
+          "scores": {
+            "kouhai": 1,
+            "douki": 1,
+            "haishinsha": 1,
+            "ai": 1,
+            "mizuki": 1,
+            "koito": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q276_02",
+          "label": "体型",
+          "scores": {
+            "ginpatsu": 1,
+            "bokukko": 1,
+            "douki": 1,
+            "ai": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q276_03",
+          "label": "顔",
+          "scores": {
+            "ginpatsu": 1,
+            "kouhai": 1,
+            "bokukko": 1,
+            "douki": 1,
+            "haishinsha": 1,
+            "ai": 1,
+            "mizuki": 1,
+            "koito": 1,
+            "natsu": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q277",
+      "category": "appearance",
+      "prompt": "髪型で惹かれるのは？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q277_01",
+          "label": "短め",
+          "scores": {
+            "ginpatsu": 1,
+            "kouhai": 1,
+            "bokukko": 1,
+            "douki": 1,
+            "haishinsha": 1,
+            "mizuki": 1,
+            "koito": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q277_02",
+          "label": "長め",
+          "scores": {
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q277_03",
+          "label": "特にこだわらない",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q278",
+      "category": "appearance",
+      "prompt": "服装で好きなのは？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q278_01",
+          "label": "素朴で自然",
+          "scores": {
+            "koito": 1,
+            "mizuki": 1,
+            "haishinsha": 1,
+            "ginpatsu": 1,
+            "kouhai": 1,
+            "douki": 1
+          }
+        },
+        {
+          "id": "Q278_02",
+          "label": "かわいらしい",
+          "scores": {
+            "koito": 1,
+            "ginpatsu": 1,
+            "kouhai": 1,
+            "ai": 1
+          }
+        },
+        {
+          "id": "Q278_03",
+          "label": "ボーイッシュ",
+          "scores": {
+            "natsu": 1,
+            "bokukko": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q278_04",
+          "label": "少し個性的",
+          "scores": {
+            "mizuki": 1,
+            "haishinsha": 1,
+            "ai": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q279",
+      "category": "appearance",
+      "prompt": "見た目のギャップなら？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q279_01",
+          "label": "普段地味なのに意外と可愛い",
+          "scores": {
+            "mizuki": 1,
+            "bokukko": 1,
+            "ginpatsu": 1,
+            "haishinsha": 1,
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q279_02",
+          "label": "普段活発なのに急に女の子らしい",
+          "scores": {
+            "douki": 1,
+            "natsu": 1,
+            "ai": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q279_03",
+          "label": "無口そうなのによく笑う",
+          "scores": {
+            "ginpatsu": 1,
+            "haishinsha": 1,
+            "koito": 1
+          }
+        },
+        {
+          "id": "Q279_04",
+          "label": "見た目は普通なのに秘密がある",
+          "scores": {
+            "mizuki": 1,
+            "bokukko": 1,
+            "koito": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q280",
+      "category": "playful",
+      "prompt": "最後のプリンが一つ。どうする？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q280_01",
+          "label": "半分こ",
+          "scores": {
+            "koito": 1,
+            "haishinsha": 1,
+            "bokukko": 1,
+            "ginpatsu": 1
+          }
+        },
+        {
+          "id": "Q280_02",
+          "label": "譲る",
+          "scores": {
+            "koito": 1,
+            "mizuki": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q280_03",
+          "label": "じゃんけん",
+          "scores": {
+            "natsu": 1,
+            "koito": 1,
+            "ai": 1,
+            "haishinsha": 1,
+            "douki": 1,
+            "bokukko": 1,
+            "ginpatsu": 1
+          }
+        },
+        {
+          "id": "Q280_04",
+          "label": "相手に選ばせる",
+          "scores": {
+            "koito": 1,
+            "mizuki": 1,
+            "douki": 1,
+            "kouhai": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q285",
+      "category": "playful",
+      "prompt": "好きな子のスマホ画面が偶然見えた。何が一番ドキッとする？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q285_01",
+          "label": "自分との写真",
+          "scores": {}
+        },
+        {
+          "id": "Q285_02",
+          "label": "昔の写真",
+          "scores": {
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q285_03",
+          "label": "知らなかった趣味",
+          "scores": {
+            "mizuki": 1,
+            "haishinsha": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q285_04",
+          "label": "自分とのくだらない会話ログ",
+          "scores": {
+            "natsu": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q286",
+      "category": "playful",
+      "prompt": "一つだけ相手の本音を知れるなら？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q286_01",
+          "label": "自分を好きか",
+          "scores": {
+            "haishinsha": 1,
+            "mizuki": 1,
+            "bokukko": 1
+          }
+        },
+        {
+          "id": "Q286_02",
+          "label": "一緒にいて楽しいか",
+          "scores": {
+            "koito": 1,
+            "douki": 1,
+            "natsu": 1
+          }
+        },
+        {
+          "id": "Q286_03",
+          "label": "何を悩んでいるか",
+          "scores": {}
+        },
+        {
+          "id": "Q286_04",
+          "label": "誰にも言っていない秘密",
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "id": "Q287",
+      "category": "playful",
+      "prompt": "恋人から「話したいことがある」とだけ届いた。まず何を思う？",
+      "enabled": true,
+      "options": [
+        {
+          "id": "Q287_01",
+          "label": "デートの計画かな？",
+          "scores": {
+            "ginpatsu": 1,
+            "koito": 1,
+            "kouhai": 1
+          }
+        },
+        {
+          "id": "Q287_02",
+          "label": "とりあえず通話しよう",
+          "scores": {
+            "natsu": 1,
+            "ai": 1,
+            "douki": 1
+          }
+        },
+        {
+          "id": "Q287_03",
+          "label": "振られるのかな…",
+          "scores": {
+            "mizuki": 1,
+            "bokukko": 1,
+            "haishinsha": 1
+          }
+        }
+      ]
+    }
+  ]
+}

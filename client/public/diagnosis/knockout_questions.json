@@ -1,0 +1,92 @@
+{
+  "version": "1.0",
+  "questions": [
+    {
+      "id": "KO01",
+      "prompt": "ギャルが好き？",
+      "options": [
+        {
+          "label": "はい、かなり好き",
+          "knockout": true,
+          "gameOverKey": "gyaru"
+        },
+        {
+          "label": "別にそこまでではない",
+          "knockout": false
+        }
+      ]
+    },
+    {
+      "id": "KO02",
+      "prompt": "メガネっ子が好き？",
+      "options": [
+        {
+          "label": "はい、かなり好き",
+          "knockout": true,
+          "gameOverKey": "glasses"
+        },
+        {
+          "label": "別にそこまでではない",
+          "knockout": false
+        }
+      ]
+    },
+    {
+      "id": "KO03",
+      "prompt": "元気な年下と、セクシーなお姉さんなら？",
+      "options": [
+        {
+          "label": "元気な年下",
+          "knockout": false
+        },
+        {
+          "label": "セクシーなお姉さん",
+          "knockout": true,
+          "gameOverKey": "sexy_older"
+        }
+      ]
+    },
+    {
+      "id": "KO04",
+      "prompt": "女の子に振り回されたい？",
+      "options": [
+        {
+          "label": "ドSなくらいが好き",
+          "knockout": true,
+          "gameOverKey": "dom_s"
+        },
+        {
+          "label": "ちょっと強気くらいなら好き",
+          "knockout": false
+        },
+        {
+          "label": "素直な子のほうが好き",
+          "knockout": false
+        }
+      ]
+    },
+    {
+      "id": "KO05",
+      "prompt": "恋愛漫画に一番求めるのは？",
+      "options": [
+        {
+          "label": "初々しさ",
+          "knockout": false
+        },
+        {
+          "label": "関係性の変化",
+          "knockout": false
+        },
+        {
+          "label": "日常の延長",
+          "knockout": false
+        },
+        {
+          "label": "色気と刺激",
+          "knockout": true,
+          "gameOverKey": "stimulus"
+        }
+      ]
+    }
+  ]
+}

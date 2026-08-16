@@ -1,0 +1,157 @@
+{
+  "version": "1.0",
+  "layout": "one_page_manga",
+  "common": {
+    "title": "GAME OVER",
+    "subtitle": "この恋の捜査対象は初恋ラボの管轄外です",
+    "buttons": [
+      {
+        "id": "retry",
+        "label": "もう一度診断する",
+        "action": "restart"
+      },
+      {
+        "id": "works",
+        "label": "作品一覧を見る",
+        "href": null
+      },
+      {
+        "id": "detective",
+        "label": "童貞探偵事務所を読む",
+        "href": "https://x.com/hatsukoi_lab/status/2086648757727461871?s=46&t=qbfHeFk00Q2vIBxpGUZ2_g"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "key": "gyaru",
+      "triggerLabel": "ギャルが好き",
+      "panels": [
+        {
+          "speaker": "道庭",
+          "text": "くそっ！そんな…"
+        },
+        {
+          "speaker": "鳴海",
+          "text": "先生！どうしたんスか？"
+        },
+        {
+          "speaker": "道庭",
+          "text": "…該当するキャラや作品がない！"
+        },
+        {
+          "speaker": "鳴海",
+          "text": "そんな……"
+        },
+        {
+          "speaker": "道庭",
+          "text": "このサークルの作品にはギャル系ヒロインはないんだ…"
+        }
+      ]
+    },
+    {
+      "key": "glasses",
+      "triggerLabel": "メガネっ子が好き",
+      "panels": [
+        {
+          "speaker": "道庭",
+          "text": "くそっ！そんな…"
+        },
+        {
+          "speaker": "鳴海",
+          "text": "先生！どうしたんスか？"
+        },
+        {
+          "speaker": "道庭",
+          "text": "…該当するキャラや作品がない！"
+        },
+        {
+          "speaker": "鳴海",
+          "text": "そんな……"
+        },
+        {
+          "speaker": "道庭",
+          "text": "このサークルの作品にはメガネヒロインがいないんだ…"
+        }
+      ]
+    },
+    {
+      "key": "sexy_older",
+      "triggerLabel": "セクシーなお姉さんが好き",
+      "panels": [
+        {
+          "speaker": "道庭",
+          "text": "くそっ！そんな…"
+        },
+        {
+          "speaker": "鳴海",
+          "text": "先生！どうしたんスか？"
+        },
+        {
+          "speaker": "道庭",
+          "text": "…該当するキャラや作品がない！"
+        },
+        {
+          "speaker": "鳴海",
+          "text": "そんな……"
+        },
+        {
+          "speaker": "道庭",
+          "text": "このサークルの作品にはセクシーなお姉さん系ヒロインはないんだ…"
+        }
+      ]
+    },
+    {
+      "key": "dom_s",
+      "triggerLabel": "ドSなくらいが好き",
+      "panels": [
+        {
+          "speaker": "道庭",
+          "text": "くそっ！そんな…"
+        },
+        {
+          "speaker": "鳴海",
+          "text": "先生！どうしたんスか？"
+        },
+        {
+          "speaker": "道庭",
+          "text": "…該当するキャラや作品がない！"
+        },
+        {
+          "speaker": "鳴海",
+          "text": "そんな……"
+        },
+        {
+          "speaker": "道庭",
+          "text": "このサークルの作品にはドSに振り回してくるヒロインはいないんだ…"
+        }
+      ]
+    },
+    {
+      "key": "stimulus",
+      "triggerLabel": "色気と刺激を一番求める",
+      "panels": [
+        {
+          "speaker": "道庭",
+          "text": "くそっ！そんな…"
+        },
+        {
+          "speaker": "鳴海",
+          "text": "先生！どうしたんスか？"
+        },
+        {
+          "speaker": "道庭",
+          "text": "…該当するキャラや作品がない！"
+        },
+        {
+          "speaker": "鳴海",
+          "text": "そんな……"
+        },
+        {
+          "speaker": "道庭",
+          "text": "このサークルの作品には色気と刺激を主軸にした恋はないんだ…"
+        }
+      ]
+    }
+  ]
+}

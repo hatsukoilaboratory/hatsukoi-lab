@@ -1,0 +1,159 @@
+{
+  "version": "1.0",
+  "note": "workTitle / workUrl / image が未確定の箇所は null。Manus側で勝手に補完せず、後から差し替えること。",
+  "characters": [
+    {
+      "id": "ginpatsu",
+      "name": "銀髪幼馴染ちゃん",
+      "shortName": "銀髪",
+      "slug": "ginpatsu",
+      "image": null,
+      "workTitle": null,
+      "workUrl": null,
+      "resultTags": [
+        "幼馴染",
+        "長い関係",
+        "安心感",
+        "日常の延長"
+      ],
+      "resultBase": "ずっとそばにいた相手との、自然で安心できる恋に惹かれやすいタイプ。",
+      "ctaLabel": "この子の作品を見る"
+    },
+    {
+      "id": "kouhai",
+      "name": "黒髪後輩ちゃん",
+      "shortName": "後輩",
+      "slug": "kouhai",
+      "image": null,
+      "workTitle": null,
+      "workUrl": null,
+      "resultTags": [
+        "後輩",
+        "まっすぐ",
+        "励ましてくれる",
+        "学校"
+      ],
+      "resultBase": "まっすぐ支えてくれる年下の子や、距離が縮まる瞬間の勢いに弱いタイプ。",
+      "ctaLabel": "この子の作品を見る"
+    },
+    {
+      "id": "bokukko",
+      "name": "ボクっ娘幼馴染ちゃん",
+      "shortName": "ボクっ娘",
+      "slug": "bokukko",
+      "image": null,
+      "workTitle": null,
+      "workUrl": null,
+      "resultTags": [
+        "幼馴染",
+        "再会",
+        "ギャップ",
+        "強がり"
+      ],
+      "resultBase": "昔から知る相手の変化や、友達っぽい距離から急に見える女の子らしさに弱いタイプ。",
+      "ctaLabel": "この子の作品を見る"
+    },
+    {
+      "id": "douki",
+      "name": "大学同期ちゃん",
+      "shortName": "同期",
+      "slug": "douki",
+      "image": null,
+      "workTitle": null,
+      "workUrl": null,
+      "resultTags": [
+        "同期",
+        "気安さ",
+        "友達から恋人",
+        "自然体"
+      ],
+      "resultBase": "気を遣わない友達関係が、そのまま恋へ変わっていく空気に惹かれやすいタイプ。",
+      "ctaLabel": "この子の作品を見る"
+    },
+    {
+      "id": "haishinsha",
+      "name": "地味っ子配信者ちゃん",
+      "shortName": "配信者",
+      "slug": "haishinsha",
+      "image": null,
+      "workTitle": null,
+      "workUrl": null,
+      "resultTags": [
+        "同級生",
+        "控えめ",
+        "秘密の一面",
+        "少しずつ近づく"
+      ],
+      "resultBase": "控えめな子の意外な一面や、少しずつ距離を縮めていく恋に弱いタイプ。",
+      "ctaLabel": "この子の作品を見る"
+    },
+    {
+      "id": "ai",
+      "name": "アイちゃん",
+      "shortName": "アイ",
+      "slug": "ai",
+      "image": null,
+      "workTitle": "あなたにアイを伝えにきたよ♪",
+      "workUrl": null,
+      "resultTags": [
+        "後輩寄り",
+        "元気",
+        "まっすぐ",
+        "自然体"
+      ],
+      "resultBase": "元気でまっすぐな子と、構えすぎず自然に距離を縮める恋が好きなタイプ。",
+      "ctaLabel": "この子の作品を見る"
+    },
+    {
+      "id": "mizuki",
+      "name": "水城 友結",
+      "shortName": "水城",
+      "slug": "mizuki",
+      "image": null,
+      "workTitle": null,
+      "workUrl": null,
+      "resultTags": [
+        "静か",
+        "掴みどころがない",
+        "二人だけの距離",
+        "ギャップ"
+      ],
+      "resultBase": "静かで少し掴みどころのない子が、自分にだけ見せる表情や距離感に惹かれるタイプ。",
+      "ctaLabel": "この子の作品を見る"
+    },
+    {
+      "id": "koito",
+      "name": "佐瀬 小糸",
+      "shortName": "小糸",
+      "slug": "koito",
+      "image": null,
+      "workTitle": null,
+      "workUrl": null,
+      "resultTags": [
+        "初々しい",
+        "少しずつ",
+        "照れ",
+        "穏やか"
+      ],
+      "resultBase": "穏やかで初々しい関係を、時間をかけて一歩ずつ進めたいタイプ。",
+      "ctaLabel": "この子の作品を見る"
+    },
+    {
+      "id": "natsu",
+      "name": "三浦 夏",
+      "shortName": "なっちゃん",
+      "slug": "natsu",
+      "image": null,
+      "workTitle": "下ネタ女子ならヤれるって思ってない！？",
+      "workUrl": null,
+      "resultTags": [
+        "友達",
+        "気安い",
+        "冗談",
+        "ギャップ"
+      ],
+      "resultBase": "冗談を言い合える友達っぽい関係の中に、急に恋人らしさが混ざる瞬間に弱いタイプ。",
+      "ctaLabel": "この子の作品を見る"
+    }
+  ]
+}
