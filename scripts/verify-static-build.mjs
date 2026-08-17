@@ -1,14 +1,15 @@
 import { readFile } from "node:fs/promises";
 
 const origin = process.env.STATIC_TEST_ORIGIN ?? "http://127.0.0.1:4173";
-const routes = ["/", "/heroines", "/diagnosis", "/diagnosis/gameover", "/diagnosis/result/ai", "/commission", "/about", "/about-production", "/works/ginpatsu", "/works/kouhai", "/works/bokukko", "/works/douki", "/works/haishinsha", "/works/ai", "/works/mizuki", "/works/koito", "/works/natsu", "/404"];
+const routes = ["/", "/heroines", "/diagnosis", "/diagnosis/gameover", "/diagnosis/result/ai", "/fun", "/commission", "/about", "/about-production", "/mutual", "/works/ginpatsu", "/works/kouhai", "/works/bokukko", "/works/douki", "/works/haishinsha", "/works/ai", "/works/mizuki", "/works/koito", "/works/natsu", "/404"];
 const manifest = JSON.parse(await readFile("dist/public/assets/asset-manifest.json", "utf8"));
 const failures = [];
 
 for (const route of routes) {
   const response = await fetch(`${origin}${route}`);
   const body = await response.text();
-  if (!response.ok || !body.includes("<div id=\"root\">")) failures.push(`route ${route}: HTTP ${response.status}`);
+  const isStandaloneGame = route === "/mutual" && body.includes("助手・鳴海の推理ゲーム") && body.includes('id="game-screen"');
+  if (!response.ok || (!body.includes("<div id=\"root\">") && !isStandaloneGame)) failures.push(`route ${route}: HTTP ${response.status}`);
 }
 
 for (const asset of manifest.assets) {
@@ -20,6 +21,10 @@ const indexHtml = await readFile("dist/public/index.html", "utf8");
 if (/manus-storage|manus\.space|__manus__|VITE_ANALYTICS_ENDPOINT/.test(indexHtml)) failures.push("index.html includes a Manus-specific runtime reference");
 if (!indexHtml.includes('property="og:url" content="https://hatsukoi-lab.com/"')) failures.push("index.html: absolute og:url is missing");
 if (!indexHtml.includes('property="og:image" content="https://hatsukoi-lab.com/assets/')) failures.push("index.html: absolute og:image is missing");
+
+const mutualHtml = await readFile("dist/public/mutual/index.html", "utf8");
+if (!mutualHtml.includes("助手・鳴海の推理ゲーム")) failures.push("mutual/index.html: game title is missing");
+if (!mutualHtml.includes("CHARACTER_MASTER") || !mutualHtml.includes("CASE_DATA") || !mutualHtml.includes("VERDICT_LINES")) failures.push("mutual/index.html: editable game data is missing");
 
 for (const slug of ["ginpatsu", "kouhai", "bokukko", "douki", "haishinsha", "ai", "mizuki", "koito", "natsu"]) {
   const document = await readFile(`dist/public/works/${slug}/index.html`, "utf8");
@@ -47,11 +52,14 @@ for (const page of diagnosisPages) {
 
 const sitemap = await readFile("dist/public/sitemap.xml", "utf8");
 if (!sitemap.includes("https://hatsukoi-lab.com/about")) failures.push("sitemap.xml: /about is missing");
+if (!sitemap.includes("https://hatsukoi-lab.com/fun")) failures.push("sitemap.xml: /fun is missing");
+if (!sitemap.includes("https://hatsukoi-lab.com/mutual")) failures.push("sitemap.xml: /mutual is missing");
 
 const prerendered = [
   "index.html",
   "heroines/index.html",
   "diagnosis/index.html",
+  "fun/index.html",
   "diagnosis/gameover/index.html",
   "commission/index.html",
   "about/index.html",

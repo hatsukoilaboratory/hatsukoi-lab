@@ -21,6 +21,9 @@ export function SiteHeader() {
           <Link href="/heroines" className={`site-nav__link ${location === "/heroines" ? "is-active" : ""}`}>
             作品をえらぶ
           </Link>
+          <Link href="/fun" className={`site-nav__link ${location === "/fun" ? "is-active" : ""}`}>
+            おたのしみ
+          </Link>
           <Link href="/commission" className={`site-nav__link ${location === "/commission" ? "is-active" : ""}`}>
             お仕事のご依頼
           </Link>

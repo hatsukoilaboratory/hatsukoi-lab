@@ -8,6 +8,8 @@ const routes = [
   "/",
   "/heroines",
   "/diagnosis",
+  "/fun",
+  "/mutual",
   "/commission",
   "/about",
   "/works/ginpatsu",

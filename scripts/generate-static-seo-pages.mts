@@ -12,6 +12,7 @@ const pages = [
   { route: "/", title: "初恋ラボ｜イチャラブ漫画サークル", description: "両想いの甘い恋愛を描く、AI作画漫画サークル「初恋ラボ」の公式サイト。", h1: "初恋ラボ", jsonLd: organizationJsonLd(siteUrl, logoUrl) },
   { route: "/heroines", title: "ヒロインから作品をえらぶ｜初恋ラボ", description: "初恋ラボのヒロインたちから、あなたの好きな作品をえらべます。", h1: "ヒロインから作品をえらぶ" },
   { route: "/diagnosis", title: "童貞探偵の恋愛嗜好捜査｜初恋ラボ", description: "道庭と鳴海が進行する、初恋ラボの恋愛嗜好診断。質問に答えてあなたに合うヒロインを探します。", h1: "童貞探偵の恋愛嗜好捜査" },
+  { route: "/fun", title: "おたのしみ｜初恋ラボ", description: "推しを調査する恋愛嗜好診断と、来訪順を推理する両想いとすれ違いを収録した初恋ラボのおたのしみ。", h1: "おたのしみ" },
   { route: "/commission", title: "お仕事のご依頼｜初恋ラボ", description: "初恋ラボの漫画制作・キャラクターデザインのお仕事依頼について。", h1: "お仕事のご依頼" },
   { route: "/about", title: "初恋ラボについて｜イチャラブ漫画サークル", description: "初恋ラボの活動内容と、AI画像生成を利用した漫画の制作工程について。", h1: "初恋ラボについて" },
 ];

@@ -1,5 +1,5 @@
 // 初恋ラボのルート共通シェル。「ふわり恋色ノート」のページ遷移は常に新しい便箋の先頭から読み始める。
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
@@ -12,7 +12,15 @@ import WorkPlaceholder from "@/pages/WorkPlaceholder";
 import Commission from "@/pages/Commission";
 import Diagnosis from "@/pages/Diagnosis";
 import AboutProduction from "@/pages/AboutProduction";
+import Fun from "@/pages/Fun";
 
+function MutualGameRedirect() {
+  useEffect(() => {
+    window.location.replace("/mutual/index.html");
+  }, []);
+
+  return null;
+}
 
 function Router() {
   return (
@@ -24,6 +32,8 @@ function Router() {
       <Route path={"/diagnosis/gameover"} component={Diagnosis} />
       <Route path={"/diagnosis/result/:slug"} component={Diagnosis} />
       <Route path={"/diagnosis"} component={Diagnosis} />
+      <Route path={"/fun"} component={Fun} />
+      <Route path={"/mutual"} component={MutualGameRedirect} />
       <Route path={"/about"} component={AboutProduction} />
       <Route path={"/about-production"} component={AboutProduction} />
       <Route path={"/404"} component={NotFound} />
