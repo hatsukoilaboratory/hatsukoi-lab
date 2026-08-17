@@ -48,11 +48,6 @@
     </style>
   </head>
   <body>
-    <style>
-      .image-avatar.uses-direct-offset { background-image:none; }
-      .avatar-art { display:none; }
-      .image-avatar.uses-direct-offset .avatar-art { position:absolute; inset:0; display:block; background-image:var(--face-image); background-position:var(--face-position,50% 17%); background-repeat:no-repeat; background-size:var(--face-scale,190%) auto; transform:translateY(var(--face-offset-y,0)); }
-    </style>
     <main class="game-shell">
       <header class="game-topbar"><a class="brand" href="/">初恋ラボ</a><span class="case-chip">道庭探偵事務所・事件簿</span></header>
       <section class="screen panel title-screen" id="title-screen">
@@ -81,7 +76,7 @@
         { id:'char07', name:'アイちゃん', generation:1, icon:'/assets/haishinsha_97c8bdd3.webp', facePosition:'50% 9%', faceScale:'190%', trait:'甘いもの好き', color:'#e49b6c' },
         { id:'char08', name:'水城さん', generation:1, icon:'/assets/mizuki_76484601.webp', facePosition:'50% 11%', faceScale:'168%', trait:'絵を描くのが得意', color:'#6d96ae' },
         { id:'char09', name:'小糸ちゃん', generation:2, icon:'/assets/koito_877c0272.webp', facePosition:'50% 9%', faceScale:'190%', trait:'まっすぐな返事', color:'#c78c9d' },
-        { id:'char01', name:'三浦 夏', generation:2, icon:'/assets/natsu_6cb31210.webp', facePosition:'37% 0%', faceScale:'165%', faceOffsetY:'5px', trait:'焼き菓子が好き', color:'#c98190' }
+        { id:'char01', name:'三浦 夏', generation:2, icon:'/assets/natsu_6cb31210.webp', facePosition:'37% 10%', faceScale:'165%', trait:'焼き菓子が好き', color:'#c98190' }
       ];
       const CASE_DATA = {
         caseId:'case001', title:'差し入れの謎', answer:'random',
@@ -109,7 +104,7 @@
       const byId = (id) => document.getElementById(id);
       const character = (id) => CHARACTER_MASTER.find((item) => item.id === id);
       const pick = (items) => items[Math.floor(Math.random()*items.length)];
-      function renderAvatar(char, className='tiny-avatar') { if(char.icon){ const avatar=document.createElement('span'); avatar.className=`${className} image-avatar${char.faceOffsetY?' uses-direct-offset':''}`; avatar.setAttribute('role','img'); avatar.setAttribute('aria-label',char.name); avatar.style.setProperty('--face-image',`url("${char.icon}")`); avatar.style.setProperty('--face-position',char.facePosition||'50% 15%'); avatar.style.setProperty('--face-scale',char.faceScale||'265%'); avatar.style.setProperty('--face-backdrop',char.faceBackdrop||'#f5e8ed'); avatar.style.setProperty('--face-border',char.faceBorder||'rgba(111,70,86,.2)'); avatar.style.setProperty('--face-shadow',char.faceShadow||'transparent'); if(char.faceOffsetY){ avatar.style.setProperty('--face-offset-y',char.faceOffsetY); const art=document.createElement('span'); art.className='avatar-art'; art.setAttribute('aria-hidden','true'); avatar.append(art); } return avatar; } const avatar=document.createElement('span'); avatar.className=className; avatar.style.setProperty('--avatar',char.color); avatar.setAttribute('aria-hidden','true'); return avatar; }
+      function renderAvatar(char, className='tiny-avatar') { if(char.icon){ const avatar=document.createElement('span'); avatar.className=`${className} image-avatar`; avatar.setAttribute('role','img'); avatar.setAttribute('aria-label',char.name); avatar.style.setProperty('--face-image',`url("${char.icon}")`); avatar.style.setProperty('--face-position',char.facePosition||'50% 15%'); avatar.style.setProperty('--face-scale',char.faceScale||'265%'); avatar.style.setProperty('--face-backdrop',char.faceBackdrop||'#f5e8ed'); avatar.style.setProperty('--face-border',char.faceBorder||'rgba(111,70,86,.2)'); avatar.style.setProperty('--face-shadow',char.faceShadow||'transparent'); return avatar; } const avatar=document.createElement('span'); avatar.className=className; avatar.style.setProperty('--avatar',char.color); avatar.setAttribute('aria-hidden','true'); return avatar; }
       function setScreen(name){ ['title','intro','game','clear'].forEach((screen)=>byId(`${screen}-screen`).hidden=screen!==name); window.scrollTo({top:0,behavior:'smooth'}); }
       function makeAnswer(size){ if(Array.isArray(CASE_DATA.answer)) return CASE_DATA.answer.slice(0,size); const pool=[...CHARACTER_MASTER]; const answer=[]; while(answer.length<size){ answer.push(pool.splice(Math.floor(Math.random()*pool.length),1)[0].id); } return answer; }
       function witnessText(template){ const first=character(state.answer[0]); const second=character(state.answer[1]); const last=character(state.answer[state.answer.length-1]); return template.replace('{trait1}',first.trait).replace('{trait2}',second.trait).replace('{traitLast}',last.trait); }
