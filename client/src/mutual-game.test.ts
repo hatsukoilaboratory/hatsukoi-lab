@@ -77,4 +77,32 @@ describe("鳴海からの挑戦状", () => {
     expect(html).not.toContain("証言メモ");
     expect(html).not.toContain("trait:");
   });
+
+  it("判定結果を操作直後に表示し、同じ回答の連続判定を拒否する", async () => {
+    const html = await readFile(gamePath, "utf8");
+    const actionIndex = html.indexOf('id="submit-button"');
+    const verdictIndex = html.indexOf('id="narumi-response"');
+    const characterIndex = html.indexOf('id="character-grid"');
+
+    expect(actionIndex).toBeGreaterThan(-1);
+    expect(verdictIndex).toBeGreaterThan(actionIndex);
+    expect(characterIndex).toBeGreaterThan(verdictIndex);
+    expect(html).toContain("lastSubmittedSignature");
+    expect(html).toContain("function submissionSignature()");
+    expect(html).toContain("state.lastSubmittedSignature===signature");
+    expect(html).toContain("判定済み！");
+    expect(html).toContain("response.scrollIntoView");
+  });
+
+  it("プレイ中のコレクション閲覧から推理状態を維持して戻れる", async () => {
+    const html = await readFile(gamePath, "utf8");
+
+    expect(html).toContain("道庭探偵事務所</span>");
+    expect(html).not.toContain("道庭探偵事務所　留守番中");
+    expect(html).toContain("function openCollection(origin='title')");
+    expect(html).toContain("openCollection('game')");
+    expect(html).toContain("推理に戻る");
+    expect(html).toContain("function returnFromCollection()");
+    expect(html).toContain("setScreen('game')");
+  });
 });
