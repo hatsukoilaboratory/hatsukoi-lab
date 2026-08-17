@@ -8,7 +8,7 @@ const failures = [];
 for (const route of routes) {
   const response = await fetch(`${origin}${route}`);
   const body = await response.text();
-  const isStandaloneGame = route === "/mutual" && body.includes("助手・鳴海の推理ゲーム") && body.includes('id="game-screen"');
+  const isStandaloneGame = route === "/mutual" && body.includes("鳴海からの挑戦状") && body.includes('id="game-screen"');
   if (!response.ok || (!body.includes("<div id=\"root\">") && !isStandaloneGame)) failures.push(`route ${route}: HTTP ${response.status}`);
 }
 
@@ -23,8 +23,8 @@ if (!indexHtml.includes('property="og:url" content="https://hatsukoi-lab.com/"')
 if (!indexHtml.includes('property="og:image" content="https://hatsukoi-lab.com/assets/')) failures.push("index.html: absolute og:image is missing");
 
 const mutualHtml = await readFile("dist/public/mutual/index.html", "utf8");
-if (!mutualHtml.includes("助手・鳴海の推理ゲーム")) failures.push("mutual/index.html: game title is missing");
-if (!mutualHtml.includes("CHARACTER_MASTER") || !mutualHtml.includes("CASE_DATA") || !mutualHtml.includes("VERDICT_LINES")) failures.push("mutual/index.html: editable game data is missing");
+if (!mutualHtml.includes("鳴海からの挑戦状")) failures.push("mutual/index.html: game title is missing");
+if (!mutualHtml.includes("CHARACTER_MASTER") || !mutualHtml.includes("INTRO") || !mutualHtml.includes("function verdictLine")) failures.push("mutual/index.html: editable game data is missing");
 
 for (const slug of ["ginpatsu", "kouhai", "bokukko", "douki", "haishinsha", "ai", "mizuki", "koito", "natsu"]) {
   const document = await readFile(`dist/public/works/${slug}/index.html`, "utf8");

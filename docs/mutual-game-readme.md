@@ -1,47 +1,35 @@
-# 「助手・鳴海の推理ゲーム（仮）」編集ガイド
+# 「鳴海からの挑戦状」編集ガイド
 
-ゲーム本体は`client/public/mutual/index.html`だけで完結しています。CSS、HTML、JavaScript、キャラクターマスタ、事件データ、判定セリフが1ファイルにまとまっているため、Cloudflare Pagesへそのまま配信できます。
+ゲーム本体は`client/public/mutual/index.html`だけで完結しています。CSS、HTML、JavaScript、キャラクターマスタ、導入会話、ヒント、道庭との接点が1ファイルにまとまっており、Cloudflare Pagesへ静的配信できます。
 
-## 編集の入口
+## 編集するデータ
 
-`<script>`先頭の`CHARACTER_MASTER`、`CASE_DATA`、`VERDICT_LINES`を編集します。現在のキャラ名、属性、世代、台詞は仮置きです。正式データが届いたら、各キャラの`name`、`generation`、`trait`、`icon`を更新してください。ゲームタイトルは`<title>`・OGP・タイトル画面・X共有文に記載しているため、正式名称が決まったら合わせて置換してください。
+`<script>`先頭の`CHARACTER_MASTER`を編集します。各キャラクターには画面表示用の`name`・`icon`・顔クロップ用の`facePosition`／`faceScale`、任意の後日追加用`gift: null`、3段階の`hints`、リザルト・コレクション用の`connection`を置いています。
 
-| データ | 変更箇所 | 用途 |
+| データ | 編集箇所 | 用途 |
 |---|---|---|
-| キャラクター | `CHARACTER_MASTER` | 名前、世代、証言用属性、顔クロップ用の画像パス |
-| 事件 | `CASE_DATA` | タイトル、導入会話、固定解答、証言、締め会話 |
-| 判定会話 | `VERDICT_LINES` | `h2b1`のような判定別セリフ配列 |
-| 色 | CSSの`:root` | 背景、罫線、アクセント、影 |
+| キャラクター | `CHARACTER_MASTER` | 名前、画像、顔クロップ、ヒント、接点、将来用の差し入れ欄 |
+| 導入会話 | `INTRO` | タイトルから人数選択へ進む会話 |
+| 鳴海リアクション | `verdictLine()` | HIT / BLOWごとの判定リアクション |
+| 色と余白 | CSSの`:root`および各クラス | 背景、罫線、アクセント、画面サイズ |
 
-## 正式PNGへ差し替える場合
+ヒントはボタンを押すたびに、正解に含まれる別キャラクターの`hints`を1段階ずつ使います。位置・正解そのものが露出しないよう、ヒント文の差し替え時もこの方針を守ってください。
 
-現在は、既存ちびキャラWebPを`icon`へ設定し、`facePosition`と`faceScale`で**顔部分だけをクロップ表示**しています。各キャラの顔の位置を調整する場合は、この2値を個別に編集してください。
+## コレクションと抽選
 
-正方形256px以上のPNGまたはWebPを`client/public/mutual/img/`へ追加し、該当キャラの`icon`に`"/mutual/img/char01.webp"`のように記述します。差し替え後も顔クロップにしたい場合は`facePosition`・`faceScale`を残し、画像全体を見せたい場合は両方の設定を削除してCSSの`image-avatar`の`background-size`を調整します。ゲーム操作のため、名前ラベルは残してください。
-
-## 事件を固定する場合
-
-`CASE_DATA.answer`を`"random"`から、キャラクターIDの配列に置き換えます。ノーマルなら4人、イージーで同じ並びを使う場合は先頭3人が利用されます。
-
-```js
-answer: ["char03", "char07", "char01", "char09"]
-```
+クリアした回に登場したヒロインは、ブラウザの`localStorage`へ発見済みとして保存されます。未発見キャラクターがいる間は、各回の解答に最低1人を優先して含める設計です。コレクションの保存確認は、クリア後にページを再読み込みして`先生との縁`を開いてください。
 
 ## 公開手順
 
-リポジトリのルートで、次を実行します。
+リポジトリのルートで次を実行します。
 
 ```bash
 pnpm test
 pnpm check
 SITE_URL=https://hatsukoi-lab.com pnpm build:web
-pnpm verify:web
+STATIC_TEST_ORIGIN=http://127.0.0.1:4173 pnpm verify:web
 ```
 
-Cloudflare Pagesには`dist/public`の中身をアップロードしてください。公開後は`https://hatsukoi-lab.com/mutual`をiPhone Safari相当とPC Chrome相当で開き、タイトル、イージー、ノーマル、証言、クリア、X共有を確認します。
+Cloudflare Pagesには`dist/public`の**中身**をアップロードしてください。公開後は、`/mutual`でタイトル・導入・3人／4人モード・任意ヒント・履歴・リザルト・コレクション・X共有をスマホとPCで確認します。
 
-## 検索とテスト用URL
-
-仮タイトルの期間は、ゲーム本体に`noindex,follow`を設定しています。サイトマップには導線確認用として`/mutual`を含めますが、正式タイトルが確定して検索流入を受け入れる段階で、`client/public/mutual/index.html`の`<meta name="robots" content="noindex,follow">`を削除してください。その後、改めてビルド・Direct Uploadを行い、Search ConsoleでURL検査を実行します。
-
-`?demo=play`はノーマルの推理画面を表示し、`?demo`はイージーのクリア画面を表示する確認用パラメータです。テスト・スクリーンショット・説明用として残しています。通常のURL共有、サイトマップ、検索導線にはクエリを付けず、`https://hatsukoi-lab.com/mutual`を使用してください。
+`?demo=play`は4人モードのゲーム盤、`?demo`は3人モードのリザルトを直接表示する確認用パラメータです。ゲーム本体は現時点で`noindex,follow`のため、検索公開するときは`<meta name="robots" content="noindex,follow">`を削除してから再ビルドしてください。

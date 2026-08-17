@@ -5,17 +5,18 @@ import { describe, expect, it } from "vitest";
 const gamePath = resolve(process.cwd(), "client/public/mutual/index.html");
 const heroinesPath = resolve(process.cwd(), "client/src/data/heroines.ts");
 
-describe("両想いとすれ違い（仮）", () => {
-  it("単一HTML内に編集可能なキャラ・事件・判定データを保持する", async () => {
+describe("鳴海からの挑戦状", () => {
+  it("単一HTML内に編集可能なキャラ・ヒント・接点データを保持する", async () => {
     const html = await readFile(gamePath, "utf8");
 
-    expect(html).toContain("助手・鳴海の");
+    expect(html).toContain("鳴海からの挑戦状");
+    expect(html).toContain("先生の実力、見せるっス！");
     expect(html).toContain("const CHARACTER_MASTER");
-    expect(html).toContain("const CASE_DATA");
-    expect(html).toContain("const VERDICT_LINES");
-    expect(html).toContain("answer:'random'");
+    expect(html).toContain("const INTRO");
     expect((html.match(/id:'char\d+'/g) ?? []).length).toBe(9);
     expect((html.match(/facePosition:/g) ?? []).length).toBe(9);
+    expect((html.match(/gift:null/g) ?? []).length).toBe(9);
+    expect((html.match(/connection:'/g) ?? []).length).toBe(9);
     expect(html).toContain("name:'三浦 夏'");
     expect(html).toContain("icon:'/assets/ai_611005db.webp'");
     expect(html).toContain("icon:'/assets/haishinsha_97c8bdd3.webp'");
@@ -26,7 +27,7 @@ describe("両想いとすれ違い（仮）", () => {
     expect(html).toContain('rel="canonical" href="https://hatsukoi-lab.com/mutual"');
   });
 
-  it("候補を指定順に表示し、配信者ちゃんとアイちゃんのちびキャラを正しく対応付ける", async () => {
+  it("候補を指定順に表示し、配信者ちゃんとアイちゃんのちびキャラ対応を維持する", async () => {
     const [html, heroines] = await Promise.all([
       readFile(gamePath, "utf8"),
       readFile(heroinesPath, "utf8"),
@@ -51,16 +52,29 @@ describe("両想いとすれ違い（仮）", () => {
     expect(heroines).toMatch(/slug: "ai"[\s\S]*?chibiImage: "\/assets\/haishinsha_97c8bdd3\.webp"/);
   });
 
-  it("イージー・ノーマル、証言、履歴、ローカル記録、X共有を実装する", async () => {
+  it("3人・4人モード、HIT/BLOW、任意ヒント、履歴、コレクション、X共有を実装する", async () => {
     const html = await readFile(gamePath, "utf8");
 
-    expect(html).toContain("data-start=\"easy\"");
-    expect(html).toContain("data-start=\"normal\"");
-    expect(html).toContain("Math.floor(state.history.length/3)");
-    expect(html).toContain("localStorage.getItem(bestKey())");
-    expect(html).toContain("https://twitter.com/intent/tweet");
-    expect(html).toContain('id="clear-button"');
+    expect(html).toContain('data-start="three"');
+    expect(html).toContain('data-start="four"');
+    expect(html).toContain("function placeCharacter");
     expect(html).toContain("function clearSlots()");
-    expect(html).not.toContain("else { state.slots=Array(DIFFICULTY[state.mode].size).fill(null);");
+    expect(html).toContain("HIT ${verdict.hit}");
+    expect(html).toContain("BLOW ${verdict.blow}");
+    expect(html).toContain("鳴海の判定");
+    expect(html).toContain("鳴海にヒントを聞く");
+    expect(html).toContain("function showHint()");
+    expect(html).toContain("state.hintCount>=3");
+    expect(html).toContain("もう少し聞く");
+    expect(html).toContain("もっと教えてもらう");
+    expect(html).toContain("const FOUND_KEY");
+    expect(html).toContain("function makeAnswer(size)");
+    expect(html).toContain("function renderCollection()");
+    expect(html).toContain("https://twitter.com/intent/tweet");
+    expect(html).toContain("ノーヒント");
+    expect(html).not.toContain("両想い");
+    expect(html).not.toContain("すれ違い");
+    expect(html).not.toContain("証言メモ");
+    expect(html).not.toContain("trait:");
   });
 });

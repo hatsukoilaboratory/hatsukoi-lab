@@ -25,7 +25,7 @@ export default function Home() {
             <div className="hero-message__actions">
               <Link href="/heroines" className="button button--primary">ヒロインから作品をえらぶ<span aria-hidden="true">→</span></Link>
               <Link href="/diagnosis" className="hero-message__detective"><span aria-hidden="true">⌕</span>童貞探偵に推しを推理してもらう</Link>
-              <a href="/mutual" className="hero-message__detective"><span aria-hidden="true">♡</span>差し入れの謎を推理する</a>
+              <a href="/mutual" className="hero-message__detective"><span aria-hidden="true">♡</span>鳴海からの挑戦状に挑む</a>
             </div>
           </div>
         </section>
