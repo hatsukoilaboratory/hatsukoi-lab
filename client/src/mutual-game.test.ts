@@ -117,4 +117,18 @@ describe("鳴海からの挑戦状", () => {
     expect(html).toContain('/assets/narumi_guide_c5705590.webp');
     expect(html).not.toContain('narumi_thinking_242d2aa2.webp');
   });
+
+  it("恋愛嗜好捜査と同じ共通ヘッダーと研究ノート基盤を使う", async () => {
+    const html = await readFile(gamePath, "utf8");
+
+    expect(html).toContain('tube_full_1bee8d1e.svg');
+    expect(html).toContain('aria-label="メインナビゲーション"');
+    expect(html).toContain('トップ</a>');
+    expect(html).toContain('作品をえらぶ</a>');
+    expect(html).toContain('おたのしみ</a>');
+    expect(html).toContain('お仕事のご依頼</a>');
+    expect(html).toContain('M+PLUS+Rounded+1c');
+    expect(html).toContain('game-shell--detective');
+    expect(html).toContain('background-size:21px 21px');
+  });
 });
