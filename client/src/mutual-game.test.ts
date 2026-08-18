@@ -135,7 +135,7 @@ describe("鳴海からの挑戦状", () => {
   it("厳密探索に基づく捜査振り返りと開発用分析ログを実装する", async () => {
     const html = await readFile(gamePath, "utf8");
 
-    expect(html).toContain("investigation-engine.js");
+    expect(html).toContain("function createInvestigationEngine(size,symbolCount=9)");
     expect(html).toContain("function ensureEngine()");
     expect(html).toContain("engine.analyzeTurn");
     expect(html).toContain("analysisHistory");
@@ -145,5 +145,15 @@ describe("鳴海からの挑戦状", () => {
     expect(html).toContain("今日の捜査メモ");
     expect(html).toContain("bestMove.worstCase===1");
     expect(html).toContain("debug')!=='analysis'");
+  });
+
+  it("Cloudflareで探索モジュールの取得が不安定でも、開始イベントが別ファイルに依存しない", async () => {
+    const html = await readFile(gamePath, "utf8");
+
+    expect(html).toContain("function getInvestigationEngine(size,symbolCount=9)");
+    expect(html).toContain("function beginIntro()");
+    expect(html).toContain("byId('challenge-button').addEventListener('click',beginIntro)");
+    expect(html).not.toContain("<script type=\"module\">");
+    expect(html).not.toContain("from './investigation-engine.js'");
   });
 });
