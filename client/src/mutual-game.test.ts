@@ -105,4 +105,16 @@ describe("鳴海からの挑戦状", () => {
     expect(html).toContain("function returnFromCollection()");
     expect(html).toContain("setScreen('game')");
   });
+
+  it("ヒントを見逃さず、クリア結果からもコレクションへ往復できる", async () => {
+    const html = await readFile(gamePath, "utf8");
+
+    expect(html).toContain("bounds.top<0||bounds.bottom>window.innerHeight");
+    expect(html).toContain("response.scrollIntoView({behavior:'smooth',block:'nearest'})");
+    expect(html).toContain("openCollection('clear')");
+    expect(html).toContain("結果に戻る");
+    expect(html).toContain("setScreen('clear')");
+    expect(html).toContain('/assets/narumi_guide_c5705590.webp');
+    expect(html).not.toContain('narumi_thinking_242d2aa2.webp');
+  });
 });
