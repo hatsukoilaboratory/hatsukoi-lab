@@ -156,4 +156,20 @@ describe("鳴海からの挑戦状", () => {
     expect(html).not.toContain("<script type=\"module\">");
     expect(html).not.toContain("from './investigation-engine.js'");
   });
+
+  it("導入会話のスキップと途中推理の自動保存・再開を提供する", async () => {
+    const html = await readFile(gamePath, "utf8");
+
+    expect(html).toContain('id="skip-intro-button"');
+    expect(html).toContain("会話をスキップして人数を選ぶ");
+    expect(html).toContain('id="resume-button"');
+    expect(html).toContain("const PROGRESS_KEY='hatsukoi-narumi-challenge-progress-v1'");
+    expect(html).toContain("function saveProgress()");
+    expect(html).toContain("function resumeProgress()");
+    expect(html).toContain("function clearSavedProgress()");
+    expect(html).toContain("byId('resume-button').addEventListener('click',resumeProgress)");
+    expect(html).toContain("clearSavedProgress();window.setTimeout(renderClear,420)");
+    expect(html).toContain("hintButton.disabled=state.hintCount>=3");
+    expect(html).toContain("state.hintCount===1?'もう少し聞く'");
+  });
 });
