@@ -131,4 +131,19 @@ describe("鳴海からの挑戦状", () => {
     expect(html).toContain('game-shell--detective');
     expect(html).toContain('background-size:21px 21px');
   });
+
+  it("厳密探索に基づく捜査振り返りと開発用分析ログを実装する", async () => {
+    const html = await readFile(gamePath, "utf8");
+
+    expect(html).toContain("investigation-engine.js");
+    expect(html).toContain("function ensureEngine()");
+    expect(html).toContain("engine.analyzeTurn");
+    expect(html).toContain("analysisHistory");
+    expect(html).toContain("鳴海の捜査振り返り");
+    expect(html).toContain("今回いちばん惜しかったのは");
+    expect(html).toContain("この時点のおすすめ手");
+    expect(html).toContain("今日の捜査メモ");
+    expect(html).toContain("bestMove.worstCase===1");
+    expect(html).toContain("debug')!=='analysis'");
+  });
 });
