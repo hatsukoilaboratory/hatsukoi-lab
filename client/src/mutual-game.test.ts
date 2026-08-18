@@ -172,4 +172,13 @@ describe("鳴海からの挑戦状", () => {
     expect(html).toContain("hintButton.disabled=state.hintCount>=3");
     expect(html).toContain("state.hintCount===1?'もう少し聞く'");
   });
+
+  it("保存済みの推理がある時だけ再開ボタンを控えめに強調する", async () => {
+    const html = await readFile(gamePath, "utf8");
+
+    expect(html).toContain("has-saved-progress");
+    expect(html).toContain("animation:resume-attention");
+    expect(html).toContain("button.classList.toggle('has-saved-progress',hasSavedProgress)");
+    expect(html).toContain("@media(prefers-reduced-motion:reduce)");
+  });
 });
