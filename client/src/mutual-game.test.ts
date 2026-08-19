@@ -201,4 +201,15 @@ describe("鳴海からの挑戦状", () => {
     expect(html).toContain("object-fit:contain");
     expect(html).toContain('loading=\'lazy\'');
   });
+
+  it("新規ご褒美CGの解放演出にだけ紙吹雪を表示し、モーション軽減設定を尊重する", async () => {
+    const html = await readFile(gamePath, "utf8");
+
+    expect(html).toContain('id="reward-confetti"');
+    expect(html).toContain("function launchRewardConfetti()");
+    expect(html).toContain("window.matchMedia('(prefers-reduced-motion: reduce)').matches");
+    expect(html).toContain("['lucky','reward','complete'].includes(item.type)");
+    expect(html).toContain("if(!viewOnly&&['lucky','reward','complete'].includes(item.type))launchRewardConfetti()");
+    expect(html).toContain("@keyframes reward-confetti-fall");
+  });
 });
