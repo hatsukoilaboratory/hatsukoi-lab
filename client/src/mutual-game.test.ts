@@ -17,7 +17,7 @@ describe("鳴海からの挑戦状", () => {
     expect((html.match(/facePosition:/g) ?? []).length).toBe(9);
     expect((html.match(/gift:null/g) ?? []).length).toBe(9);
     expect((html.match(/connection:'/g) ?? []).length).toBe(9);
-    expect(html).toContain("name:'三浦 夏'");
+    expect(html).toContain("gameName:'なっちゃん'");
     expect(html).toContain("icon:'/assets/ai_611005db.webp'");
     expect(html).toContain("icon:'/assets/haishinsha_97c8bdd3.webp'");
     expect(html).toContain("image-avatar");
@@ -42,9 +42,9 @@ describe("鳴海からの挑戦状", () => {
       "アイちゃん",
       "水城さん",
       "小糸ちゃん",
-      "三浦 夏",
+      "なっちゃん",
     ];
-    const positions = expectedOrder.map((name) => html.indexOf(`name:'${name}'`));
+    const positions = expectedOrder.map((name) => html.indexOf(`gameName:'${name}'`));
 
     expect(positions.every((position) => position >= 0)).toBe(true);
     expect(positions).toEqual([...positions].sort((a, b) => a - b));
@@ -211,5 +211,41 @@ describe("鳴海からの挑戦状", () => {
     expect(html).toContain("['lucky','reward','complete'].includes(item.type)");
     expect(html).toContain("if(!viewOnly&&['lucky','reward','complete'].includes(item.type))launchRewardConfetti()");
     expect(html).toContain("@keyframes reward-confetti-fall");
+  });
+
+  it("同率を含む最善手を改善対象から除外し、全手最善なら専用総評を表示する", async () => {
+    const html = await readFile(gamePath, "utf8");
+
+    expect(html).toContain("function isOptimalMove(entry)");
+    expect(html).toContain("entry.analysis.playerMove.worstCase===entry.analysis.bestMove.worstCase");
+    expect(html).toContain("const improvable=state.analysisHistory.filter(entry=>!isOptimalMove(entry))");
+    expect(html).toContain("今回の捜査、ほぼ完璧っス！");
+    expect(html).toContain("この手は最善だったっス！");
+    expect(html).toContain("この一手は直すところないっスよ。");
+  });
+
+  it("内容別の捜査メモを直近と重複させず、プレイ結果に応じて選ぶ", async () => {
+    const html = await readFile(gamePath, "utf8");
+
+    expect(html).toContain("const MEMO_HISTORY_KEY='hatsukoi-narumi-investigation-memo-history-v1'");
+    expect(html).toContain("const INVESTIGATION_MEMOS=");
+    expect(html).toContain("function chooseInvestigationMemo({allOptimal,focus})");
+    expect(html).toContain("unique.filter(id=>id!==history.at(-1))");
+    expect(html).toContain("HITだけじゃなくBLOWも大事っス");
+    expect(html).toContain("ご褒美ライン突破っス！");
+  });
+
+  it("本編の親しみやすい呼称とご褒美CGの正式名称を分離する", async () => {
+    const html = await readFile(gamePath, "utf8");
+
+    expect(html).toContain("const REWARD_DISPLAY_NAMES=");
+    expect(html).toContain("gameName:'なっちゃん'");
+    expect(html).toContain("natsu:'三浦 夏'");
+    expect(html).toContain("ginpatsu:'銀髪幼馴染ちゃん'");
+    expect(html).toContain("mizuki:'水城 友結'");
+    expect(html).toContain("koito:'佐瀬 小糸'");
+    expect(html).toContain("reward.displayName");
+    expect(html).toContain("char.gameName");
+    expect(html).not.toContain("name:'三浦 夏'");
   });
 });
