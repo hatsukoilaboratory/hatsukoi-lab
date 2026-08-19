@@ -64,7 +64,8 @@ describe("鳴海からの挑戦状", () => {
     expect(html).toContain("鳴海の判定");
     expect(html).toContain("鳴海にヒントを聞く");
     expect(html).toContain("function showHint()");
-    expect(html).toContain("state.hintCount>=3");
+    expect(html).toContain("const HINT_LIMIT={three:2,four:3}");
+    expect(html).toContain("state.hintCount>=HINT_LIMIT[state.mode]");
     expect(html).toContain("もう少し聞く");
     expect(html).toContain("もっと教えてもらう");
     expect(html).toContain("const FOUND_KEY");
@@ -169,8 +170,18 @@ describe("鳴海からの挑戦状", () => {
     expect(html).toContain("function clearSavedProgress()");
     expect(html).toContain("byId('resume-button').addEventListener('click',resumeProgress)");
     expect(html).toContain("clearSavedProgress();window.setTimeout(renderClear,420)");
-    expect(html).toContain("hintButton.disabled=state.hintCount>=3");
-    expect(html).toContain("state.hintCount===1?'もう少し聞く'");
+    expect(html).toContain("hintButton.disabled=state.hintCount>=HINT_LIMIT[state.mode]");
+    expect(html).toContain("if(state.hintCount===1)return'もう少し聞く'");
+  });
+
+  it("3人は2回、4人は3回のヒント上限を使い、保存済みの旧3回状態は3人で2回へ丸める", async () => {
+    const html = await readFile(gamePath, "utf8");
+
+    expect(html).toContain("const HINT_LIMIT={three:2,four:3}");
+    expect(html).toContain("function hintButtonLabel()");
+    expect(html).toContain("function updateHintButton()");
+    expect(html).toContain("state.hintCount=Math.min(saved.hintCount||0,HINT_LIMIT[state.mode])");
+    expect(html).toContain("ヒント${state.hintCount}/${HINT_LIMIT[state.mode]}");
   });
 
   it("保存済みの推理がある時だけ再開ボタンを控えめに強調する", async () => {
