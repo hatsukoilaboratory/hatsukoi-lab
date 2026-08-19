@@ -213,6 +213,20 @@ describe("鳴海からの挑戦状", () => {
     expect(html).toContain("@keyframes reward-confetti-fall");
   });
 
+  it("新規解放のご褒美CGだけをギャラリーでNEW表示し、閲覧後に既読化する", async () => {
+    const html = await readFile(gamePath, "utf8");
+
+    expect(html).toContain("const NEW_REWARD_KEY='hatsukoi-mutual-reward-new-v1'");
+    expect(html).toContain("function rememberNewRewards(rewards)");
+    expect(html).toContain("function markRewardSeen(rewardId)");
+    expect(html).toContain("rememberNewRewards([...newlyUnlocked,...(completeUnlocked?[COMPLETE_REWARD]:[])])");
+    expect(html).toContain("const newRewards=loadNewRewards()");
+    expect(html).toContain("reward-new-badge");
+    expect(html).toContain("badge.textContent='NEW'");
+    expect(html).toContain("markRewardSeen(reward.id);renderRewardModal");
+    expect(html).toContain("@keyframes reward-new-attention");
+  });
+
   it("同率を含む最善手を改善対象から除外し、全手最善なら専用総評を表示する", async () => {
     const html = await readFile(gamePath, "utf8");
 
