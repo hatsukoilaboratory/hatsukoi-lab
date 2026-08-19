@@ -181,4 +181,24 @@ describe("鳴海からの挑戦状", () => {
     expect(html).toContain("button.classList.toggle('has-saved-progress',hasSavedProgress)");
     expect(html).toContain("@media(prefers-reduced-motion:reduce)");
   });
+
+  it("ご褒美CGを手数だけで重複なく解放し、ギャラリーで再閲覧できる", async () => {
+    const html = await readFile(gamePath, "utf8");
+
+    expect(html).toContain("const REWARD_KEY='hatsukoi-mutual-reward-unlocked-v1'");
+    expect(html).toContain("const REWARD_COMPLETE_KEY='hatsukoi-mutual-reward-complete-v1'");
+    expect(html).toContain("const REWARD_LIMIT={three:4,four:5}");
+    expect(html).toContain("function getRewardResult(mode,clearTurns)");
+    expect(html).toContain("clearTurns===1");
+    expect(html).toContain("REWARD_CGS.filter(reward=>!unlocked.has(reward.id))");
+    expect(html).toContain("if(resolution.result.reward==='UNLOCK_ALL')queue.push({type:'lucky'});else resolution.newlyUnlocked.forEach");
+    expect((html.match(/\/mutual\/assets\/rewards\/reward_[a-z_]+\.webp/g) ?? []).length).toBe(10);
+    expect(html).toContain('id="reward-gallery-screen"');
+    expect(html).toContain("function openGallery(origin='title')");
+    expect(html).toContain("function returnFromGallery()");
+    expect(html).toContain("openGallery('game')");
+    expect(html).toContain("openGallery('clear')");
+    expect(html).toContain("object-fit:contain");
+    expect(html).toContain('loading=\'lazy\'');
+  });
 });
